@@ -1,8 +1,60 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+/* HEADER */
+
+.Secction-header{
+  width: 100%;
 }
+.Header-h1{
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+.Header-nav{
+  background-color: rgb(100, 100, 1);
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+.Header-ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header-li{
+  color: white;
+}
+
+
+/* FOOTER */
+
+.Secction-footer{
+  width: 100%;
+  background-color: rgb(100, 100, 1);
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.Footer-nav{
+
+}
+.Footer-ul{
+
+}
+.Footer-li{
+  font-size: 0.9em;
+  line-height: 1.4rem;
+}
+
+
 
 

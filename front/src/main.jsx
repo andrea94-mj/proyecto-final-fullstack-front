@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Layout from './Layout'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+import router from '@/lib/routes'
+// import { UserProvider } from '@/hooks/useUser'
 import './css/index.css'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Layout />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    {/* <UserProvider> */}
+      <RouterProvider router={router}/>
+    {/* </UserProvider> */}
+  </React.StrictMode>,
 )

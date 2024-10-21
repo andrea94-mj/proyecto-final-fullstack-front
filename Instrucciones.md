@@ -15,7 +15,7 @@ export default defineConfig({
 })
 ```
 - [ ] Instalar TailwindCSS (script cdn + tailwind.config.js) En la página de tailwind aparece el paquete para instalarlo en la terminal
-- [ ] Crear páginas principales: Registro - Login - Home público - Home privado (pages/ <Home><Login><Registro><Admin>)
+- [X] Crear páginas principales: Registro - Login - Home público - Home privado (pages/ <Home><Login><Registro><Admin>)
 - [ ] Crear Layout (Header + Main + Footer)
 - [ ] Configurar rutas de React-Router-Dom
 - [ ] Mock User (en lib/constants.js) para pruebas
