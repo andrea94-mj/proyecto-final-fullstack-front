@@ -16,7 +16,7 @@
   padding: 1rem;
 }
 .Header-nav{
-  background-color: rgb(100, 100, 1);
+  background-color: rgb(128, 128, 0);
   padding: 1rem 2rem;
   margin: 0 auto;
 }
@@ -30,12 +30,26 @@
   color: white;
 }
 
+.Usuario{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.Img-usuario{
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+}
+
 
 /* FOOTER */
 
 .Secction-footer{
   width: 100%;
-  background-color: rgb(100, 100, 1);
+  background-color: rgb(128, 128, 0);
   color: white;
   display: flex;
   flex-flow: row nowrap;
@@ -43,16 +57,29 @@
   align-items: center;
   padding: 2rem;
 }
-
-.Footer-nav{
-
-}
-.Footer-ul{
-
-}
 .Footer-li{
   font-size: 0.9em;
   line-height: 1.4rem;
+  cursor: pointer;
+}
+.Footer-li:hover{
+  text-decoration: underline;
+}
+
+.Footer-ul{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Footer-img{
+  width: 1.6rem;
+  cursor: pointer;
+  gap: 2rem;
+}
+.Footer-img:hover{
+  transform: scale(1.1);
 }
 
 
