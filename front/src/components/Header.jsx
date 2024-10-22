@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import { usoUsuario } from "@/hooks/usoUsuario";
+import { MockUser } from "@/lib/constants";
 
 const Header = () => {
 

@@ -9,25 +9,35 @@
 
 .Secction-header{
   width: 100%;
-}
-.Header-h1{
-  font-size: 3rem;
-  text-align: center;
-  padding: 1rem;
-}
-.Header-nav{
-  background-color: rgb(128, 128, 0);
-  padding: 1rem 2rem;
-  margin: 0 auto;
-}
-.Header-ul{
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(200, 200, 200, 0.5);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 4rem;
+}
+.Header-h1{
+  font-size: 3rem;
+  text-align: center;
+}
+.Header-nav{
+  /* background-color: white;
+  padding: 1rem 2rem; */
+  /* margin: 0 auto; */
+}
+.Header-ul{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 3rem;
 }
 .Header-li{
-  color: white;
+  color: rgb(128, 128, 0);
+}
+
+.Header-li:hover{
+  transform: scale(1.05);
 }
 
 .Usuario{
@@ -49,13 +59,14 @@
 
 .Secction-footer{
   width: 100%;
-  background-color: rgb(128, 128, 0);
-  color: white;
+  background-color: white;
+  box-shadow: 4px 0 10px rgba(200, 200, 200, 0.5);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  color: rgb(128, 128, 0);
 }
 .Footer-li{
   font-size: 0.9em;
@@ -80,6 +91,7 @@
 }
 .Footer-img:hover{
   transform: scale(1.1);
+  opacity: 70%;
 }
 
 
