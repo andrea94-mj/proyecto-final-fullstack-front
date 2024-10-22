@@ -1,28 +1,50 @@
 
-
 .Header-img{
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .Header-h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgb(128, 128, 0);
     text-align: center;
 }
 
 .Section-home{
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem auto;
+    margin: 3rem auto ;
 }
 
 .Section-info{
-    width: 300px;
-    height: 300px;
+    width: 430px;
+    height: 480px;
     background-color: rgb(128, 128, 0);
     border-radius: 8px;
-    
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.Secction-icono{
+    width: 4.5rem;
+}
+
+.Secction-h2{
+    color: white;
+    font-size: 1.05em;
+}
+
+.Secction-p{
+    font-size: 0.95em;
+    color: white;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 1.2rem;
 }

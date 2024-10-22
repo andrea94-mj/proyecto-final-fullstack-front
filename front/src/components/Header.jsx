@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import { usoUsuario } from "@/hooks/usoUsuario";
 
+import logo_buscamascotas from "@/assets/logo_buscamascotas.svg"
+
 
 const Header = () => {
 
@@ -9,7 +11,7 @@ const Header = () => {
     return (
         <>
             <section className="Secction-header">
-                <h1 className="Header-h1"><b>BuscaMascotas</b></h1>
+                <img className="Secction-img" src={logo_buscamascotas} alt="buscamascotas" />
                 <nav className="Header-nav">
                     <ul className="Header-ul">
                         <li><NavLink to="/" className="Header-li"><b>Inicio</b></NavLink></li>
