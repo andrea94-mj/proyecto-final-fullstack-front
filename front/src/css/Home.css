@@ -1,0 +1,28 @@
+
+
+.Header-img{
+    width: 100%;
+}
+
+.Header-h1{
+    font-size: 4rem;
+    color: rgb(128, 128, 0);
+    text-align: center;
+}
+
+.Section-home{
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.Section-info{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(128, 128, 0);
+    border-radius: 8px;
+    
+}

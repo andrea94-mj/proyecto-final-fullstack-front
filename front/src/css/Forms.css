@@ -1,11 +1,10 @@
 .Article-form{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     margin: 0;
     gap: 4rem;
 }
@@ -20,7 +19,7 @@
 .Form-registro {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.1);
     padding: 1.25rem;
     width: 400px;
     text-align: center;
@@ -29,7 +28,7 @@
 .Form-acceso{
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.1);
     padding: 1.25rem;
     width: 400px;
     text-align: center;

@@ -1,6 +1,8 @@
 import { createContext, useContext, useState} from "react";
 import { usoUsuario } from "@/hooks/usoUsuario";
 
+import "@/css/Forms.css";
+
 const FormAcceso = () =>{
 
         const [formData, setFormData] = useState({
