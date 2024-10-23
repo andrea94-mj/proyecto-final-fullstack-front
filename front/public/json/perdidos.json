@@ -1,0 +1,138 @@
+[
+    {
+      "id": 0,
+      "imagen": "https://example.com/images/perro1.jpg",
+      "nombre": "Max",
+      "tipo_de_animal": "Perro",
+      "raza": "Labrador",
+      "color": "Negro",
+      "genero": "Macho",
+      "ultima_vez_visto": {
+        "lugar": "Parque Turia, Valencia",
+        "fecha": "2024-10-15"
+      },
+      "contacto": {
+        "nombre": "Juan Pérez",
+        "telefono": "607 95 87 32"
+      }
+    },
+    {
+      "id": 1,
+      "imagen": "https://example.com/images/gato1.jpg",
+      "nombre": "Mimi",
+      "tipo_de_animal": "Gato",
+      "raza": null,
+      "color": "Gris",
+      "genero": "Hembra",
+      "ultima_vez_visto": {
+        "lugar": "La Latina, Madrid",
+        "fecha": "2024-10-20"
+      },
+      "contacto": {
+        "nombre": "Ana Gómez",
+        "telefono": "654 34 78 12"
+      }
+    },
+    {
+      "id": 2,
+      "imagen": "https://example.com/images/perro2.jpg",
+      "nombre": "Luna",
+      "tipo_de_animal": "Perro",
+      "raza": "Beagle",
+      "color": "Marrón, negro y blanco",
+      "genero": "Hembra",
+      "ultima_vez_visto": {
+        "lugar": "El Prat, Barcelona",
+        "fecha": "2024-10-10"
+      },
+      "contacto": {
+        "nombre": "Carlos López",
+        "telefono": "639 78 41 27"
+      }
+    },
+    {
+      "id": 3,
+      "imagen": "https://example.com/images/gato2.jpg",
+      "nombre": "Felix",
+      "tipo_de_animal": "Hurón",
+      "raza": null,
+      "color": "Marrón y blanco",
+      "genero": "Macho",
+      "ultima_vez_visto": {
+        "lugar": "Plaza Mayor, Madrid",
+        "fecha": "2024-10-22"
+      },
+      "contacto": {
+        "nombre": "Laura Martínez",
+        "telefono": "759 67 12 98"
+      }
+    },
+    {
+      "id": 4,
+      "imagen": "https://example.com/images/perro3.jpg",
+      "nombre": "Rocky",
+      "tipo_de_animal": "Loro",
+      "raza": "Guacamayo",
+      "color": "Azul, amarillo y verde",
+      "genero": "Macho",
+      "ultima_vez_visto": {
+        "lugar": "Ciudad de las Artes y las Ciencias, Valencia",
+        "fecha": "2024-10-18"
+      },
+      "contacto": {
+        "nombre": "Mario Sánchez",
+        "telefono": "693 57 55 92"
+      }
+    },
+    {
+      "id": 5,
+      "imagen": "https://example.com/images/gato3.jpg",
+      "nombre": "Lola",
+      "tipo_de_animal": "Gato",
+      "raza": null,
+      "color": "Negro y blanco",
+      "genero": "Hembra",
+      "ultima_vez_visto": {
+        "lugar": "Calle Laurel, Logroño",
+        "fecha": "2024-10-12"
+      },
+      "contacto": {
+        "nombre": "Sofía Jiménez",
+        "telefono": "658 76 22 45"
+      }
+    },
+    {
+      "id": 6,
+      "imagen": "https://example.com/images/perro4.jpg",
+      "nombre": "Pepe",
+      "tipo_de_animal": "Gato",
+      "raza": null,
+      "color": "Atigrado",
+      "genero": "Macho",
+      "ultima_vez_visto": {
+        "lugar": "Castellar, Valencia",
+        "fecha": "2024-10-19"
+      },
+      "contacto": {
+        "nombre": "Patricia González",
+        "telefono": "681 45 93 71"
+      }
+    },
+    {
+      "id": 7,
+      "imagen": "https://example.com/images/gato4.jpg",
+      "nombre": "Chuchi",
+      "tipo_de_animal": "Perro",
+      "raza": "Caniche",
+      "color": "Blanco",
+      "genero": "Macho",
+      "ultima_vez_visto": {
+        "lugar": "Villalbilla, Madrid",
+        "fecha": "2024-10-21"
+      },
+      "contacto": {
+        "nombre": "Luis Rodríguez",
+        "telefono": "798 57 12 79"
+      }
+    }
+  ]
