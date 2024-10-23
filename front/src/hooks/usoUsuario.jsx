@@ -48,7 +48,7 @@ export function UserProvider({children}){
         const response = await fetch(`${VITE_API_URL}/registro`, {
             method: "POST",
             headers: {
-                'Content-type' : 'aplication/json'
+                'Content-type': 'application/json'
             },
         });
 

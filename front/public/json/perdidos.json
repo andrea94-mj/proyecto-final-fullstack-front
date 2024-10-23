@@ -1,14 +1,14 @@
-[
+{"results":[
     {
       "id": 0,
-      "imagen": "https://example.com/images/perro1.jpg",
+      "imagen": "/src/assets/labrador_negro.webp",
       "nombre": "Max",
       "tipo_de_animal": "Perro",
       "raza": "Labrador",
       "color": "Negro",
       "genero": "Macho",
       "ultima_vez_visto": {
-        "lugar": "Parque Turia, Valencia",
+        "lugar": "Valencia",
         "fecha": "2024-10-15"
       },
       "contacto": {
@@ -18,14 +18,14 @@
     },
     {
       "id": 1,
-      "imagen": "https://example.com/images/gato1.jpg",
+      "imagen": "/src/assets/gato_gris.webp",
       "nombre": "Mimi",
       "tipo_de_animal": "Gato",
       "raza": null,
       "color": "Gris",
       "genero": "Hembra",
       "ultima_vez_visto": {
-        "lugar": "La Latina, Madrid",
+        "lugar": "Coslada",
         "fecha": "2024-10-20"
       },
       "contacto": {
@@ -35,14 +35,14 @@
     },
     {
       "id": 2,
-      "imagen": "https://example.com/images/perro2.jpg",
+      "imagen": "/src/assets/beagle.webp",
       "nombre": "Luna",
       "tipo_de_animal": "Perro",
       "raza": "Beagle",
       "color": "Marrón, negro y blanco",
       "genero": "Hembra",
       "ultima_vez_visto": {
-        "lugar": "El Prat, Barcelona",
+        "lugar": "El Prat",
         "fecha": "2024-10-10"
       },
       "contacto": {
@@ -52,14 +52,14 @@
     },
     {
       "id": 3,
-      "imagen": "https://example.com/images/gato2.jpg",
-      "nombre": "Felix",
+      "imagen": "/src/assets/huron.webp",
+      "nombre": "Félix",
       "tipo_de_animal": "Hurón",
       "raza": null,
       "color": "Marrón y blanco",
       "genero": "Macho",
       "ultima_vez_visto": {
-        "lugar": "Plaza Mayor, Madrid",
+        "lugar": "Bilbao",
         "fecha": "2024-10-22"
       },
       "contacto": {
@@ -69,14 +69,14 @@
     },
     {
       "id": 4,
-      "imagen": "https://example.com/images/perro3.jpg",
+      "imagen": "/src/assets/guacamayo.webp",
       "nombre": "Rocky",
       "tipo_de_animal": "Loro",
       "raza": "Guacamayo",
       "color": "Azul, amarillo y verde",
       "genero": "Macho",
       "ultima_vez_visto": {
-        "lugar": "Ciudad de las Artes y las Ciencias, Valencia",
+        "lugar": "Oviedo",
         "fecha": "2024-10-18"
       },
       "contacto": {
@@ -86,14 +86,14 @@
     },
     {
       "id": 5,
-      "imagen": "https://example.com/images/gato3.jpg",
+      "imagen": "/src/assets/gato_negro.webp",
       "nombre": "Lola",
       "tipo_de_animal": "Gato",
       "raza": null,
       "color": "Negro y blanco",
       "genero": "Hembra",
       "ultima_vez_visto": {
-        "lugar": "Calle Laurel, Logroño",
+        "lugar": "Logroño",
         "fecha": "2024-10-12"
       },
       "contacto": {
@@ -103,14 +103,14 @@
     },
     {
       "id": 6,
-      "imagen": "https://example.com/images/perro4.jpg",
+      "imagen": "/src/assets/gato_atigrado.webp",
       "nombre": "Pepe",
       "tipo_de_animal": "Gato",
       "raza": null,
       "color": "Atigrado",
       "genero": "Macho",
       "ultima_vez_visto": {
-        "lugar": "Castellar, Valencia",
+        "lugar": "Castellón",
         "fecha": "2024-10-19"
       },
       "contacto": {
@@ -120,14 +120,14 @@
     },
     {
       "id": 7,
-      "imagen": "https://example.com/images/gato4.jpg",
+      "imagen": "/src/assets/caniche_blanco.webp",
       "nombre": "Chuchi",
       "tipo_de_animal": "Perro",
       "raza": "Caniche",
       "color": "Blanco",
       "genero": "Macho",
       "ultima_vez_visto": {
-        "lugar": "Villalbilla, Madrid",
+        "lugar": "Santiago",
         "fecha": "2024-10-21"
       },
       "contacto": {
@@ -136,3 +136,4 @@
       }
     }
   ]
+}

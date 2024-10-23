@@ -15,8 +15,8 @@ const Header = () => {
                 <nav className="Header-nav">
                     <ul className="Header-ul">
                         <li><NavLink to="/" className="Header-li"><b>Inicio</b></NavLink></li>
-                        <li><NavLink to="/encontrados" className="Header-li"><b>Encontrados</b></NavLink></li>
                         <li><NavLink to="/perdidos" className="Header-li"><b>Perdidos</b></NavLink></li>
+                        <li><NavLink to="/encontrados" className="Header-li"><b>Encontrados</b></NavLink></li>
 
                         {user ? (
                             <>
