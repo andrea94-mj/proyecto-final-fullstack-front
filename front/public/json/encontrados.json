@@ -1,0 +1,131 @@
+{"results":[
+    {
+      "id": 0,
+      "imagen": "/src/assets/suricata.webp",
+      "tipo_de_animal": "Suricata",
+      "raza": null,
+      "color": "Marrón",
+      "genero": "Macho",
+      "encontrado": {
+        "lugar": "Tenerife",
+        "fecha": "2024-10-21"
+      },
+      "contacto": {
+        "nombre": "Christian Sancho",
+        "telefono": "607 95 87 32"
+      }
+    },
+    {
+      "id": 1,
+      "imagen": "/src/assets/cacatua.webp",
+      "tipo_de_animal": "Cacatúa",
+      "raza": null,
+      "color": "Blanco",
+      "genero": "Hembra",
+      "encontrado": {
+        "lugar": "Marbella",
+        "fecha": "2024-10-17"
+      },
+      "contacto": {
+        "nombre": "María Belmonte",
+        "telefono": "654 34 78 12"
+      }
+    },
+    {
+      "id": 2,
+      "imagen": "/src/assets/chihuahua.webp",
+      "tipo_de_animal": "Perro",
+      "raza": "Chihuahua",
+      "color": "Canela",
+      "genero": "Macho",
+      "encontrado": {
+        "lugar": "Paterna",
+        "fecha": "2024-10-05"
+      },
+      "contacto": {
+        "nombre": "Barbara Rey",
+        "telefono": "639 78 41 27"
+      }
+    },
+    {
+      "id": 3,
+      "imagen": "/src/assets/gato_siames.webp",
+      "tipo_de_animal": "Gato",
+      "raza": "Siamés",
+      "color": "Blanco",
+      "genero": "Macho",
+      "encontrado": {
+        "lugar": "Palencia",
+        "fecha": "2024-10-09"
+      },
+      "contacto": {
+        "nombre": "Belén Sánchez",
+        "telefono": "759 67 12 98"
+      }
+    },
+    {
+      "id": 4,
+      "imagen": "/src/assets/iguana.webp",
+      "tipo_de_animal": "Iguana",
+      "raza": null,
+      "color": "Verde",
+      "genero": "Hembra",
+      "encontrado": {
+        "lugar": "Cádiz",
+        "fecha": "2024-10-15"
+      },
+      "contacto": {
+        "nombre": "Diego Salinas",
+        "telefono": "693 57 55 92"
+      }
+    },
+    {
+      "id": 5,
+      "imagen": "/src/assets/bulldog.webp",
+      "tipo_de_animal": "Perro",
+      "raza": "Bulldog Francés",
+      "color": "Marrón",
+      "genero": "Hembra",
+      "encontrado": {
+        "lugar": "Cudillero",
+        "fecha": "2024-10-27"
+      },
+      "contacto": {
+        "nombre": "Jose Manuel Perez",
+        "telefono": "658 76 22 45"
+      }
+    },
+    {
+      "id": 6,
+      "imagen": "/src/assets/cerdo.webp",
+      "tipo_de_animal": "Cerdo",
+      "raza": null,
+      "color": "Rosa",
+      "genero": "Macho",
+      "encontrado": {
+        "lugar": "León",
+        "fecha": "2024-10-19"
+      },
+      "contacto": {
+        "nombre": "Patricia Álvarez",
+        "telefono": "681 45 93 71"
+      }
+    },
+    {
+      "id": 7,
+      "imagen": "/src/assets/conejo.webp",
+      "tipo_de_animal": "Conejo",
+      "raza": null,
+      "color": "Gris y blanco",
+      "genero": "Hembra",
+      "encontrado": {
+        "lugar": "Valencia",
+        "fecha": "2024-10-05"
+      },
+      "contacto": {
+        "nombre": "Irina Martín",
+        "telefono": "798 57 12 79"
+      }
+    }
+  ]
+}

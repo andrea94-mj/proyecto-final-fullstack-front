@@ -1,0 +1,29 @@
+.Header-encontrados{
+    margin: 0 auto;
+    width: 80%;
+}
+.Encontrados-h1{
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.Encontrados-p{
+    color: rgb(128, 128, 0);
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+.Encontrados-container {
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto; 
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    padding: 1rem;
+}

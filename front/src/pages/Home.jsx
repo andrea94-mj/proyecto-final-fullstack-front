@@ -12,19 +12,22 @@ import icono_patitacorazon from "@/assets/icono_patitacorazon.svg";
 
 const Home = () => {
 
-
-
+    const handleImageError = (e) => {
+        e.target.src = 'https://picsum.photos/seed/picsum/200/300'; 
+        e.target.alt = 'Imagen no disponible';
+    };
+    
     return (
         <>
             <header className="Header-home">
-                <img className="Header-img" src={img_home} alt="imagen_principal" />
+                <img className="Header-img" src={img_home} alt="imagen_principal" onError={handleImageError} />
                 <h1 className="Header-h1"><b>¿Cómo podemos ayudarte?</b></h1>
             </header>
             <section className="Section-home">
                 <div className="Section-info">
-                    <img className="Secction-icono" src={icono_patitacirculo} alt="patita_circulo" />
-                    <h2 className="Secction-h2"><b>¿Quiénes somos?</b></h2>
-                    <p className="Secction-p">En BuscaMascotas, nuestro objetivo es ayudar a las personas a encontrar a sus mascotas perdidas
+                    <img className="Section-icono" src={icono_patitacirculo} alt="patita_circulo" />
+                    <h2 className="Section-h2"><b>¿Quiénes somos?</b></h2>
+                    <p className="Section-p">En BuscaMascotas, nuestro objetivo es ayudar a las personas a encontrar a sus mascotas perdidas
                         y a conectar con aquellos que hayan encontrado animales extraviados. Somos una comunidad comprometida
                         con el bienestar de los animales, donde cualquier persona puede reportar la pérdida de su mascota o informar
                         sobre animales encontrados para facilitar su reencuentro. <br />Este proyecto nació con la finalidad de
@@ -34,9 +37,9 @@ const Home = () => {
                         aumentando las posibilidades de reencuentro.</p>
                 </div>
                 <div className="Section-info">
-                    <img className="Secction-icono" src={icono_patita} alt="patita" />
-                    <h2 className="Secction-h2"><b>¿Qué hacer si has perdido a tu mascota?</b></h2>
-                    <p className="Secction-p">Si has perdido a tu mascota, es importante actuar con rapidez. Comienza buscándola en los
+                    <img className="Section-icono" src={icono_patita} alt="patita" />
+                    <h2 className="Section-h2"><b>¿Qué hacer si has perdido a tu mascota?</b></h2>
+                    <p className="Section-p">Si has perdido a tu mascota, es importante actuar con rapidez. Comienza buscándola en los
                         alrededores de donde se extravió y amplía tu búsqueda por las zonas cercanas. A continuación, visita nuestra sección
                         de animales <b><Link to="/perdidos">perdidos</Link></b>, donde podrás verificar si alguno de nuestros usuarios ha
                         encontrado a tu mascota. Si es así, podrás ponerte en contacto con ellos para facilitar el reencuentro. <br />En caso
@@ -46,9 +49,9 @@ const Home = () => {
                         nuestra página, ya que en cualquier momento uno de nuestros usuarios podría reportar haber visto a tu mascota.</p>
                 </div>
                 <div className="Section-info">
-                    <img className="Secction-icono" src={icono_patitacorazon} alt="patita_corazon" />
-                    <h2 className="Secction-h2"><b>¿Qué hacer si has encontrado una mascota?</b></h2>
-                    <p className="Secction-p">Si has encontrado una mascota perdida, lo más importante es asegurarse de que esté a salvo. Verifica si lleva alguna
+                    <img className="Section-icono" src={icono_patitacorazon} alt="patita_corazon" />
+                    <h2 className="Section-h2"><b>¿Qué hacer si has encontrado una mascota?</b></h2>
+                    <p className="Section-p">Si has encontrado una mascota perdida, lo más importante es asegurarse de que esté a salvo. Verifica si lleva alguna
                         identificación, como una placa o microchip, que pueda ayudar a localizar a su dueño. A continuación, publica un anuncio
                         en nuestra sección de animales <b><Link to="/encontrados">encontrados</Link></b>, detallando el lugar y las circunstancias
                         en las que hallaste a la mascota. Esto permitirá que el dueño pueda ponerse en contacto contigo rápidamente. <br />Además,

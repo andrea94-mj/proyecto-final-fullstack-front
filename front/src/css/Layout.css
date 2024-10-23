@@ -32,6 +32,7 @@
 
 .Header-li:hover{
   transform: scale(1.05);
+  opacity: 70%;
 }
 
 .Usuario{
