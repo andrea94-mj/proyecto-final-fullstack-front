@@ -18,12 +18,12 @@ export default defineConfig({
 - [X] Crear páginas principales: Registro - Login - Home público - Home privado (pages/ <Home><Login><Registro><Admin>)
 - [X] Crear Layout (Header + Main + Footer)
 - [X] Configurar rutas de React-Router-Dom
-- [ ] Mock User (en lib/constants.js) para pruebas
+- [X] Mock User (en lib/constants.js) para pruebas
 - [ ] Fomulario de Login - handleLogin()
 - [ ] Formulario de Registro - handleRegistro()
 - [ ] Botones de Login + Registro (<Button>) (crear en un componente)
 - [ ] Header condicional si existe user, botón Logout (para cerrar la sesión)
-- [ ] Creamos un contexto utilizando useContext para manejar el estado de autenticación y su hook personalizado (hooks/useUser.jsx 
+- [ ] Creamos un contexto utilizando useContext para manejar el estado de autenticación y su hook personalizado (hooks/useUser.jsx )
 - [ ] Simulamos guardar datos de usuario en LocalStorage
 - [ ] Proteger ruta privada (<PrivateRoute>)
 - [ ] Botón de Logout y Limpieza de sesión
