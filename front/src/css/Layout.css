@@ -24,6 +24,8 @@
 .Header-ul{
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
 }
 .Header-li{
@@ -43,10 +45,18 @@
   gap: 6px;
 }
 
-.Img-usuario{
-  width: 2.7rem;
-  height: 2.7rem;
+.Usuario-img{
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
+}
+
+.Usuario-h3{
+  font-size: 0.9em;
+}
+
+.Header-li--logout{
+  font-size: 0.9em;
 }
 
 

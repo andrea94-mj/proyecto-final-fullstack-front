@@ -7,9 +7,11 @@ import Perdidos from "@/pages/Perdidos";
 import Blog from "@/pages/Blog";
 import FormRegistro from "@/pages/FormRegistro";
 import FormAcceso from "@/pages/FormAcceso";
+import Admin from "@/pages/Admin";
 
 // Páginas especiales:
 import Layout from "@/Layout";
+import PrivateRoute from "@/components/PrivateRoute";
 
 
 const router = createBrowserRouter([{
@@ -20,6 +22,10 @@ const router = createBrowserRouter([{
         {
             index: true,
             element: <Home/>
+        },
+        {
+            path: 'administrador',
+            element: <PrivateRoute><Admin/></PrivateRoute>
         },
         {
             path: 'encontrados',
