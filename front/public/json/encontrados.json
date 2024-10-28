@@ -129,3 +129,17 @@
     }
   ]
 }
+
+// {
+//   "id": 7,
+//   "imagen": "/src/assets/conejo.webp",
+//   "tipo_de_animal": "Conejo",
+//   "raza": null,
+//   "color": "Gris y blanco",
+//   "genero": "Hembra",
+//   "lugar_encontrado": "Valencia",
+//   "fecha_encontrado:": "2024-10-05",
+//   "contacto_nombre:": "Irina Martín",
+//   "contacto_telefono": "798 57 12 79"
+
+// }

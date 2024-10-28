@@ -8,56 +8,84 @@ export function UserProvider({children}){
     const [user, setUser] = useState(null);
 
     //variables de entorno
-
+    const { VITE_API_URL, VITE_BACKEND_URL } = import.meta.env;
     //ver si ya estoy logueado
-    // useEffect(()=>{
-    //     const storedUser=localStorage.getItem("user");
-    //     if(storedUser){
-    //         setUser(JSON.parse(storedUser));
-    //     }
-    // },[]);
+    useEffect(()=>{
+        const storedUser=localStorage.getItem("user");
+        if(storedUser){
+            setUser(JSON.parse(storedUser));
+        }
+    },[]);
 
     //LOGIN
-    const login =  (userData)=>{
-        console.log('Estoy en login');
+    const login = async (userData)=>{
+        
 
-        //fetch para enviarle al backend!
-        // const response = await fetch('http://localhost:5173//acceso', {
-        //     method: "POST",
-        //     headers: {
-        //         'Content-type': 'application/json'
-        //     },
-        // });
+        try{// fetch para enviarle al backend!
+        const response = await fetch(`${VITE_API_URL}/acceso`, {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        });
 
         //el backend me devuelve mi USUARIO completo
         //foto, nombre, email (NO CONTRASEÑA)
-        // const responseData = await response.json();
-        // localStorage.setItem("user", JSON.stringify(responseData));
+        const responseData = await response.json();
+        const usuario = responseData.data;
 
-        //con setUser guardo mis datos de usuario
-        setUser(userData);
+        setUser(usuario);
+        localStorage.setItem("user", JSON.stringify(usuario));
+
+        localStorage.setItem('token', responseData.token);
+
+    } catch (e) {
+        console.error('Error:', e);
+        return "Error en el servidor";
+    }
     }
 
     //REGISTER
-    const register = (userData)=>{
+    const register = async (userData)=>{
+        try{
+                const response = await fetch(`${VITE_API_URL}/registro`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(userData)
+        });
+        
+        const responseData = await response.json();
 
-        //fetch para enviarle al backend!
-        // const response = await fetch(`${VITE_API_URL}/registro`, {
-        //     method: "POST",
-        //     headers: {
-        //         'Content-type': 'application/json'
-        //     },
-        // });
+        const usuario = responseData.data;
 
-        setUser(userData);
+        setUser(usuario);
+
+        // Guardamos el Usuario en LocalStorage
+        localStorage.setItem('user', JSON.stringify(usuario));
+
+        // Guardamos el JWT token en LocalStorage
+        localStorage.setItem('token', responseData.token);
+
+        return null; // no hay error
+    } catch (e) {
+        console.error('Error:', e);
+        return "Error en el servidor";
     }
+};
+
+        
+    
 
     //SALIR
-    const logout = ()=>{
-        console.log('Ejecutando logout');
-        //  localStorage.removeItem("user");
-         setUser(null);
-    }
+    const logout = () => {
+        localStorage.removeItem("user")
+        localStorage.removeItem('token');
+        setUser(null);
+        console.log("User logged out");
+    };
 
 
     return(

@@ -9,10 +9,8 @@ const FormAcceso = () => {
 
     const [formData, setFormData] = useState({
         username: "",
-        password: "",
-        //info que debería venir del backend
-        name: "Andrea",
-        image: "https://picsum.photos/200"
+        password: ""
+       
     });
 
     //funcion para actualizar el formdata
@@ -30,8 +28,8 @@ const FormAcceso = () => {
     //funcion para enviar el formulario
     const handleSubmit = (e) => {
         e.preventDefault(); //con este evento, hacemos que no aparezca la info de usuario y contraseña en la url 
-        navigate("/");
         login(formData);
+        navigate("/");
     };
 
 

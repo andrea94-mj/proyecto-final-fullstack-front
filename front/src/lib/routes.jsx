@@ -4,10 +4,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "@/pages/Home";
 import Encontrados from "@/pages/Encontrados";
 import Perdidos from "@/pages/Perdidos";
-import Blog from "@/pages/Blog";
 import FormRegistro from "@/pages/FormRegistro";
 import FormAcceso from "@/pages/FormAcceso";
 import Admin from "@/pages/Admin";
+import FormMascota from "../pages/FormMascota";
 
 // Páginas especiales:
 import Layout from "@/Layout";
@@ -36,16 +36,16 @@ const router = createBrowserRouter([{
             element: <Perdidos/>
         },
         {
-            path: 'blog',
-            element: <Blog/>
-        },
-        {
             path: 'registro',
             element: <FormRegistro/>
         },
         {
             path: 'acceso',
             element: <FormAcceso/>
+        },
+        {
+            path: 'mascota',
+            element: <PrivateRoute><FormMascota/></PrivateRoute>
         }
 
     ]

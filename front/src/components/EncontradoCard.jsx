@@ -1,7 +1,7 @@
 import {useState } from "react";
 import "@/css/Card.css";
 
-const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, encontrado, contacto}) =>{
+const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, lugar_encontrado, fecha_encontrado, contacto_nombre, contacto_telefono}) =>{
 
     const [mostrarContacto, setMostrarContacto] = useState(false); 
 
@@ -24,13 +24,13 @@ const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, encontrado
                         <p className="Card-p">Mi raza es: <b>{raza ? raza : "Raza desconocida"}</b></p>
                         <p className="Card-p">Soy de color: <b>{color}</b></p>
                         <p className="Card-p">Género: <b>{genero}</b></p>
-                        <p className="Card-p">Me han encontrado en: <b>{encontrado.lugar}</b></p>
-                        <p className="Card-p">El día: <b>{encontrado.fecha}</b></p>
+                        <p className="Card-p">Me han encontrado en: <b>{lugar_encontrado}</b></p>
+                        <p className="Card-p">El día: <b>{fecha_encontrado}</b></p>
                         <button className="Card-btn" onClick={toggleContacto}>Contacto
                         </button>
                         {mostrarContacto && (
                             <p className="Card-p--contacto">
-                                Encontrado por: <b>{contacto.nombre}</b><br />Teléfono: <b>{contacto.telefono}</b>
+                                Encontrado por: <b>{contacto_nombre}</b><br />Teléfono: <b>{contacto_telefono}</b>
                             </p>
                         )}
                     </div>

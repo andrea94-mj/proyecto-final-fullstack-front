@@ -21,7 +21,7 @@ const Header = () => {
 
                         {user ? (
                             <>
-                            <li><NavLink to="/blog" className="Header-li"><b>Blog</b></NavLink></li>
+                            <li><NavLink to="/mascota" className="Header-li"><b>Registrar Mascota</b></NavLink></li>
                             <div className="Usuario">
                                 <li>
                                 <img className="Usuario-img" src={user.image} alt={user.username} />

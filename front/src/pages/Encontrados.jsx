@@ -6,11 +6,13 @@ import "@/css/Encontrados.css";
 
 const Encontrados = () =>{
 
+    const URL = import.meta.env.VITE_API_URL;
+
     const [catalogo, setCatalogo] = useState([]);
     const [errorData, setErrorData] = useState("");
 
     useEffect(()=>{
-        getCatalogo('/json/encontrados.json');
+        getCatalogo(`${URL}/encontrados`);
     }, [])
 
     const getCatalogo = async (url) =>{
@@ -26,7 +28,7 @@ const Encontrados = () =>{
         return;
       }else{
         setErrorData("");
-        setCatalogo(objeto.results);
+        setCatalogo(objeto.data);
         
       }
     };
@@ -42,7 +44,7 @@ const Encontrados = () =>{
             
                 {
                     catalogo.map((catalogo) =>(
-                        <EncontradoCard key={catalogo.id} {...catalogo}/>
+                        <EncontradoCard key={catalogo._id} {...catalogo}/>
                     ))
                 }
     
