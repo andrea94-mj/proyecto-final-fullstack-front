@@ -118,7 +118,7 @@ const FormMascota = ({ onSubmit }) => {
       <div>
         <label>Lugar Encontrado:</label>
         <input
-          type="text"
+          type="date"
           name="lugar_encontrado"
           value={formData.lugar_encontrado}
           onChange={handleChange}
@@ -129,7 +129,7 @@ const FormMascota = ({ onSubmit }) => {
       <div>
         <label>Fecha Encontrado:</label>
         <input
-          type="date"
+          type="text"
           name="fecha_encontrado"
           value={formData.fecha_encontrado}
           onChange={handleChange}

@@ -1,6 +1,7 @@
 import {useState } from "react";
 import "@/css/Card.css";
 
+
 const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, lugar_encontrado, fecha_encontrado, contacto_nombre, contacto_telefono}) =>{
 
     const [mostrarContacto, setMostrarContacto] = useState(false); 
