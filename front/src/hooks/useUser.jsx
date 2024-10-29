@@ -8,7 +8,7 @@ export function UserProvider({children}){
     const [user, setUser] = useState(null);
 
     //variables de entorno
-    const { VITE_API_URL, VITE_BACKEND_URL } = import.meta.env;
+    const { VITE_API_URL } = import.meta.env;
     //ver si ya estoy logueado
     useEffect(()=>{
         const storedUser=localStorage.getItem("user");
@@ -76,9 +76,7 @@ export function UserProvider({children}){
     }
 };
 
-        
     
-
     //SALIR
     const logout = () => {
         localStorage.removeItem("user")

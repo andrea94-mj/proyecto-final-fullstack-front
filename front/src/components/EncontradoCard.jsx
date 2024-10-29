@@ -26,6 +26,7 @@ const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, lugar_enco
                         <p className="Card-p">Género: <b>{genero}</b></p>
                         <p className="Card-p">Me han encontrado en: <b>{lugar_encontrado}</b></p>
                         <p className="Card-p">El día: <b>{fecha_encontrado}</b></p>
+                        
                         <button className="Card-btn" onClick={toggleContacto}>Contacto
                         </button>
                         {mostrarContacto && (
@@ -38,6 +39,7 @@ const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, lugar_enco
             </div>
         </>
     );
+
 }
 
 export default EncontradoCard

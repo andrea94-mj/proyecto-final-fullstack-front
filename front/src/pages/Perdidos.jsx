@@ -5,11 +5,13 @@ import "@/css/Perdidos.css"
 
 const Perdidos = () =>{
 
+    const URL = import.meta.env.VITE_API_URL;
+
     const [catalogo, setCatalogo] = useState([]);
     const [errorData, setErrorData] = useState("");
 
     useEffect(()=>{
-        getCatalogo('/json/perdidos.json');
+        getCatalogo(`${URL}/perdidos`);
     }, [])
 
     const getCatalogo = async (url) =>{
@@ -25,7 +27,7 @@ const Perdidos = () =>{
         return;
       }else{
         setErrorData("");
-        setCatalogo(objeto.results);
+        setCatalogo(objeto.data);
         
       }
     };
@@ -40,7 +42,7 @@ const Perdidos = () =>{
             
                 {
                     catalogo.map((catalogo) =>(
-                        <PerdidoCard key={catalogo.id} {...catalogo}/>
+                        <PerdidoCard key={catalogo._id} {...catalogo}/>
                     ))
                 }
     

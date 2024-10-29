@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "@/css/Forms.css";
 
 const FormMascota = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
