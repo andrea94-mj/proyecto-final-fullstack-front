@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+//función para formatear la fecha y que salga en el formato correcto
+import { format } from "date-fns";
 import "@/css/Card.css";
 
 const PerdidoCard = ({ imagen, nombre, tipo_de_animal, raza, color, genero,lugar_perdido, fecha_perdido, contacto_nombre, contacto_telefono  }) => {
@@ -6,6 +9,9 @@ const PerdidoCard = ({ imagen, nombre, tipo_de_animal, raza, color, genero,lugar
     const [mostrarContacto, setMostrarContacto] = useState(false); 
 
     const isActive = nombre === "Max" ? "Card isActive" : "Card";
+
+    // Formatea la fecha para mostrar solo 'yyyy-MM-dd'
+    const fechaFormateada = format(new Date(fecha_perdido), 'yyyy-MM-dd');
 
     
     const toggleContacto = () => {
@@ -26,7 +32,7 @@ const PerdidoCard = ({ imagen, nombre, tipo_de_animal, raza, color, genero,lugar
                         <p className="Card-p">Soy de color: <b>{color}</b></p>
                         <p className="Card-p">Género: <b>{genero}</b></p>
                         <p className="Card-p">Me han visto la última vez en: <b>{lugar_perdido}</b></p>
-                        <p className="Card-p">El día: <b>{fecha_perdido}</b></p>
+                        <p className="Card-p">El día: <b>{fechaFormateada}</b></p>
                         <button className="Card-btn" onClick={toggleContacto}>Contacto
                         </button>
                         {mostrarContacto && (
