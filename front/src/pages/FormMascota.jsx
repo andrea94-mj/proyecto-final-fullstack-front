@@ -79,7 +79,9 @@ const FormMascota = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+    <article className='Article-form--mascota'>
+    <form className='Form-mascota' onSubmit={handleSubmit}>
       <div>
         <label>Imagen:</label>
         <input type="file" name="imagen" onChange={handleImageChange} accept="image/*" required />
@@ -127,7 +129,10 @@ const FormMascota = ({ onSubmit }) => {
 
       <button type="submit">Enviar</button>
     </form>
+    </article>
+    </>
   );
+
 };
 
 export default FormMascota;

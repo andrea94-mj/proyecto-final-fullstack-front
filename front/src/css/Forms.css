@@ -1,11 +1,22 @@
 .Article-form{
-    font-family: Arial, sans-serif;
+    height: 80vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    font-weight: 500;
     margin: 0;
+    gap: 4rem;
+}
+
+.Article-form--mascota{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 2rem auto;
     gap: 4rem;
 }
 
@@ -34,6 +45,15 @@
     text-align: center;
 }
 
+.Form-mascota{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    text-align: center;
+}
+
 h2 {
     margin-bottom: 20px;
     color: #333;
@@ -41,11 +61,10 @@ h2 {
 
 input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: .625rem;
+    margin-bottom: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    transition: border 0.3s;
 }
 
 input:focus {

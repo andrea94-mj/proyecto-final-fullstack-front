@@ -39,9 +39,23 @@
   }
   
   :root {
-  font-size: 100%;
-  max-width: 1450px;
-  margin: 0 auto;
+    font-size: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+  
+  /* Ancho para pantallas muy grandes */
+  @media (min-width: 1600px) {
+    :root {
+      max-width: 1600px;
+    }
+  }
+  
+  /* Ancho para pantallas medianas */
+  @media (max-width: 1200px) {
+    :root {
+      max-width: 1100px;
+    }
   }
   
   html {

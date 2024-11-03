@@ -21,7 +21,7 @@ const EncontradoCard = ({imagen, tipo_de_animal, raza, color, genero, lugar_enco
             <div className="Card">
                 <section className={isActive}>
                     <header className="Header-card">
-                    <img className="Card-img" src={`/uploads/${imagen}`} alt={tipo_de_animal} />
+                    <img className="Card-img" src={imagen} alt={tipo_de_animal} />
                     </header>
                     <div className="Card-info">
                         <p className="Card-p">Soy un: <b>{tipo_de_animal}</b></p>
