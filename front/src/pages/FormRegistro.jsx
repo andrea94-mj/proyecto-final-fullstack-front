@@ -59,7 +59,6 @@ const FormRegistro = () => {
                     {canSubmit ? <button type='submit' >Registro</button> //Si no están todos los datos completos no te deja registrarte
                                : <p className='Submit-p'>Acepte los términos y condiciones para continuar</p>}
                 <br />
-                <pre>{JSON.stringify(formData, null, 2)}</pre>
                 </form>
             </article>
         </>

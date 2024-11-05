@@ -15,7 +15,6 @@ const Footer = () => {
                         <li><NavLink to="/" className="Footer-li">Inicio</NavLink></li>
                         <li><NavLink to="/encontrados" className="Footer-li">Encontrados</NavLink></li>
                         <li><NavLink to="/perdidos" className="Footer-li">Perdidos</NavLink></li>
-                        <li><NavLink to="/blog" className="Footer-li">Blog</NavLink></li>
                         <li><NavLink to="/registro" className="Footer-li">Registro</NavLink></li>
                         <li><NavLink to="/acceso" className="Footer-li">Acceso</NavLink></li>
                     </ul>

@@ -12,6 +12,9 @@
 }
 .Card-img{
     border-radius: 8%;
+    width: 280px;
+    height: 280px;
+    align-content: center;
 }
 .Card-h1{
     text-align: center;
@@ -32,6 +35,17 @@
     font-size: 0.8em;
     line-height: 1.5rem;
 }
+.Card-alerta{
+    margin-top: 0.6rem;
+    color: black;
+    font-size: 0.65rem;
+    text-align: center;
+}
+.Card-alerta--link{
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
 .Card-btn{
     background-color: rgb(128, 128, 0);
     color: bisque;

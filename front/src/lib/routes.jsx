@@ -45,7 +45,7 @@ const router = createBrowserRouter([{
         },
         {
             path: 'mascota',
-            element: <PrivateRoute><FormMascota/></PrivateRoute>
+            element: <FormMascota/>
         }
 
     ]

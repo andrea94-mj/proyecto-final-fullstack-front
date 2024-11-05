@@ -46,8 +46,6 @@ const FormAcceso = () => {
                     <input onChange={handleChange} id="contraseña" value={formData.password} type="password" name="password" placeholder="Contraseña" required />
 
                     <input type="submit" value="Acceder" />
-
-                    <pre>{JSON.stringify(formData, null, 2)}</pre>
                 </form>
             </article>
         </>
