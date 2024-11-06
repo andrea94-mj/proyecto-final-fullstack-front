@@ -54,8 +54,28 @@
     text-align: center;
 }
 
+.Registro-mascota{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+.Form-p--registro{
+    align-content: center;
+    text-align: center;
+    color: rgb(128, 128, 0);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.Form-p--acceso{
+    text-align: center;
+}
+
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: #333;
 }
 

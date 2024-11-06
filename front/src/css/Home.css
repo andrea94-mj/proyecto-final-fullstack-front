@@ -5,9 +5,10 @@
 }
 
 .Header-h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: rgb(128, 128, 0);
     text-align: center;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 .Section-home{

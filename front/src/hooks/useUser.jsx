@@ -1,100 +1,89 @@
-import { createContext, useContext, useState, useEffect} from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
-//Crear un contexto de Usuario que abrace toda la aplicación
+// Crear un contexto de usuario para compartir el estado en toda la aplicación
 const UserContext = createContext();
 
-//Crear un provider y exportarlo para usarlo en main.jsx
-export function UserProvider({children}){
-    const [user, setUser] = useState(null);
+// Proveedor de contexto de usuario que envuelve la aplicación y permite acceder a la autenticación en cualquier componente
+export function UserProvider({ children }) {
+    const [user, setUser] = useState(null); // Estado para almacenar el usuario logueado
 
-    //variables de entorno
-    const { VITE_API_URL } = import.meta.env;
-    //ver si ya estoy logueado
-    useEffect(()=>{
-        const storedUser=localStorage.getItem("user");
-        if(storedUser){
-            setUser(JSON.parse(storedUser));
+    const { VITE_API_URL } = import.meta.env; // Variable de entorno para la URL de la API
+
+    // Comprobar si el usuario ya está logueado 
+    useEffect(() => {
+        const storedUser = localStorage.getItem("user"); // Obtener el usuario de LocalStorage
+        if (storedUser) {
+            setUser(JSON.parse(storedUser)); // Actualiza el estado del usuario
         }
-    },[]);
+    }, []);
 
-    //LOGIN
-    const login = async (userData)=>{
-        
+    // LOGIN
+    const login = async (userData) => {
+        try {
+            // Petición al backend para iniciar sesión
+            const response = await fetch(`${VITE_API_URL}/acceso`, {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
 
-        try{// fetch para enviarle al backend!
-        const response = await fetch(`${VITE_API_URL}/acceso`, {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        });
+            const responseData = await response.json(); // Respuesta con el usuario y el token
+            const usuario = responseData.data;
 
-        //el backend me devuelve mi USUARIO completo
-        //foto, nombre, email (NO CONTRASEÑA)
-        const responseData = await response.json();
-        const usuario = responseData.data;
+            setUser(usuario); // Guardar el usuario en el estado
+            localStorage.setItem("user", JSON.stringify(usuario)); // Guardar el usuario en LocalStorage
+            localStorage.setItem('token', responseData.token); // Guardar el token JWT en LocalStorage
 
-        setUser(usuario);
-        localStorage.setItem("user", JSON.stringify(usuario));
+        } catch (e) {
+            console.error('Error:', e); 
+            return "Error en el servidor"; 
+        }
+    };
 
-        localStorage.setItem('token', responseData.token);
+    // REGISTER
+    const register = async (userData) => {
+        try {
+            // Petición al backend para registrarse
+            const response = await fetch(`${VITE_API_URL}/registro`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(userData)
+            });
+            
+            const responseData = await response.json();
+            const usuario = responseData.data;
 
-    } catch (e) {
-        console.error('Error:', e);
-        return "Error en el servidor";
-    }
-    }
+            setUser(usuario); // Guardar el usuario en el estado
+            localStorage.setItem('user', JSON.stringify(usuario)); // Guardar el usuario en LocalStorage
+            localStorage.setItem('token', responseData.token); // Guardar el token JWT en LocalStorage
 
-    //REGISTER
-    const register = async (userData)=>{
-        try{
-                const response = await fetch(`${VITE_API_URL}/registro`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(userData)
-        });
-        
-        const responseData = await response.json();
+            return null; 
+        } catch (e) {
+            console.error('Error:', e);
+            return "Error en el servidor"; 
+        }
+    };
 
-        const usuario = responseData.data;
-
-        setUser(usuario);
-
-        // Guardamos el Usuario en LocalStorage
-        localStorage.setItem('user', JSON.stringify(usuario));
-
-        // Guardamos el JWT token en LocalStorage
-        localStorage.setItem('token', responseData.token);
-
-        return null; // no hay error
-    } catch (e) {
-        console.error('Error:', e);
-        return "Error en el servidor";
-    }
-};
-
-    
-    //SALIR
+    // LOGOUT
     const logout = () => {
-        localStorage.removeItem("user")
-        localStorage.removeItem('token');
-        setUser(null);
+        localStorage.removeItem("user"); // Eliminar el usuario de LocalStorage
+        localStorage.removeItem('token'); // Eliminar el token de LocalStorage
+        setUser(null); // Reiniciar el estado del usuario
         console.log("User logged out");
     };
 
-
-    return(
+    return (
         <UserContext.Provider value={{ user, login, logout, register }}>
             {children}
         </UserContext.Provider>
-    )
+    );
 }
 
-//Crear un Custom Hook para usar nuestro contexto de Usuario
-//Se exporta para poder usarlo desde cualquier componente
-export function useUser(){
+// Custom Hook para usar el contexto de usuario en otros componentes
+export function useUser() {
     return useContext(UserContext);
 }

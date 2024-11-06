@@ -28,14 +28,14 @@
   img, picture, video, iframe {
   display: block;
   width: 100%;
-  /* height: initial; */
+
   }
   
   form, input, label, select, option, textarea, button {
   font-size: inherit;
   font-family: inherit;
   display: block;
-  /* background-color: transparent; */
+
   }
   
   :root {

@@ -1,19 +1,20 @@
-//Hooks
-import {useUser} from '@/hooks/useUser';
-import FormAcceso from '@/pages/FormAcceso';
+import { useUser } from '@/hooks/useUser'; 
+import FormAcceso from '@/pages/FormAcceso'; 
 
-const PrivateRoute = ({children}) => {
+const PrivateRoute = ({ children }) => {
+  
+  // Hook useUser para obtener el estado del usuario
+  const { user } = useUser();
 
-    const {user} = useUser();
+  return user ? (
+    // Si el usuario está autenticado, se renderiza el contenido protegido (children)
+    children
+  ) : (
+    // Si el usuario no está autenticado, se muestra el formulario de acceso
+    <>
+      <FormAcceso />
+    </>
+  );
+};
 
-    return user ? children
-            :<>
-            <h2>Ruta privada</h2>
-             <p>Accede a tu cuenta para visualizar el contenido</p>
-             <FormAcceso/>
-            </>
-        
-     ;
-}
- 
 export default PrivateRoute;

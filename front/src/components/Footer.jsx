@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
-
 import facebook from '@/assets/facebook.svg';
 import instagram from '@/assets/instagram.svg';
 import x_logo from '@/assets/x_logo.svg';

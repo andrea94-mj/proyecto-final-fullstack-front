@@ -1,30 +1,29 @@
 import { Link } from "react-router-dom";
-
-// CSS
-import "@/css/Home.css";
-
-//Imágenes
 import img_home from "@/assets/img_home.jpg";
 import icono_patitacirculo from "@/assets/icono_patitacirculo.svg";
 import icono_patita from "@/assets/icono_patita.svg";
 import icono_patitacorazon from "@/assets/icono_patitacorazon.svg";
+import "@/css/Home.css";
 
-
+// Componente principal para la página de inicio
 const Home = () => {
 
+    // Función para manejar errores en la carga de la imagen principal
     const handleImageError = (e) => {
-        e.target.src = 'https://picsum.photos/seed/picsum/200/300'; 
+        e.target.src = 'https://picsum.photos/seed/picsum/200/300';
         e.target.alt = 'Imagen no disponible';
     };
-    
+
     return (
         <>
             <header className="Header-home">
+                {/* Imagen principal de la página con mensaje de error en caso de que no cargue */}
                 <img className="Header-img" src={img_home} alt="imagen_principal" onError={handleImageError} />
                 <h1 className="Header-h1"><b>¿Cómo podemos ayudarte?</b></h1>
             </header>
             <section className="Section-home">
                 <div className="Section-info">
+                    {/* Sección de información sobre la plataforma */}
                     <img className="Section-icono" src={icono_patitacirculo} alt="patita_circulo" />
                     <h2 className="Section-h2"><b>¿Quiénes somos?</b></h2>
                     <p className="Section-p">En BuscaMascotas, nuestro objetivo es ayudar a las personas a encontrar a sus mascotas perdidas
@@ -37,6 +36,7 @@ const Home = () => {
                         aumentando las posibilidades de reencuentro.</p>
                 </div>
                 <div className="Section-info">
+                    {/* Sección de consejos para quienes han perdido a su mascota */}
                     <img className="Section-icono" src={icono_patita} alt="patita" />
                     <h2 className="Section-h2"><b>¿Qué hacer si has perdido a tu mascota?</b></h2>
                     <p className="Section-p">Si has perdido a tu mascota, es importante actuar con rapidez. Comienza buscándola en los
@@ -49,6 +49,7 @@ const Home = () => {
                         nuestra página, ya que en cualquier momento uno de nuestros usuarios podría reportar haber visto a tu mascota.</p>
                 </div>
                 <div className="Section-info">
+                    {/* Sección de consejos para quienes han encontrado una mascota */}
                     <img className="Section-icono" src={icono_patitacorazon} alt="patita_corazon" />
                     <h2 className="Section-h2"><b>¿Qué hacer si has encontrado una mascota?</b></h2>
                     <p className="Section-p">Si has encontrado una mascota perdida, lo más importante es asegurarse de que esté a salvo. Verifica si lleva alguna
@@ -64,4 +65,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
