@@ -34,7 +34,7 @@ const EncontradoCard = ({ imagen, tipo_de_animal, raza, color, genero, lugar_enc
                          {/* La línea comentada sería una opción para mostrar la imagen desde el backend */}
                     </header>
                     <div className="Card-info">
-                        <p className="Card-p">Soy un: <b>{tipo_de_animal}</b></p> 
+                        <p className="Card-p"><b>{tipo_de_animal}</b></p> 
                         <p className="Card-p">Mi raza es: <b>{raza ? raza : "Raza desconocida"}</b></p> 
                         <p className="Card-p">Soy de color: <b>{color}</b></p> 
                         <p className="Card-p">Género: <b>{genero}</b></p> 
