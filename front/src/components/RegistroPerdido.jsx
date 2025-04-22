@@ -51,8 +51,8 @@ const RegistroPerdido = ({ onSubmit }) => {
     data.append('raza', formData.raza);
     data.append('color', formData.color);
     data.append('genero', formData.genero);
-    data.append('lugar_perdido', formData.lugar_encontrado);
-    data.append('fecha_perdido', formData.fecha_encontrado);
+    data.append('lugar_perdido', formData.lugar_perdido);
+    data.append('fecha_perdido', formData.fecha_perdido);
     data.append('contacto_nombre', formData.contacto_nombre);
     data.append('contacto_telefono', formData.contacto_telefono);
 
