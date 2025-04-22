@@ -13,7 +13,11 @@ export function UserProvider({ children }) {
     useEffect(() => {
         const storedUser = localStorage.getItem("user"); // Obtener el usuario de LocalStorage
         if (storedUser) {
-            setUser(JSON.parse(storedUser)); // Actualiza el estado del usuario
+            try {
+                setUser(JSON.parse(storedUser)); // Actualiza el estado del usuario
+            } catch (error) {
+                console.error("Error al parsear el usuario almacenado:", error);
+            }
         }
     }, []);
 

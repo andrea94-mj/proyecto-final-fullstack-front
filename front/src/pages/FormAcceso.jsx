@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useUser } from "@/hooks/useUser";
-import "@/css/Forms.css";
+import "@/css/forms.css";
 
 // Componente para el formulario de inicio de sesión
 const FormAcceso = () => {

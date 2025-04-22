@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
-import facebook from '@/assets/facebook.svg';
-import instagram from '@/assets/instagram.svg';
-import x_logo from '@/assets/x_logo.svg';
+
 
 
 const Footer = () => {
@@ -31,15 +29,15 @@ const Footer = () => {
                 <nav className="Footer-nav">
                     <ul className="Footer-ul">
                         <li><a className="Footer-a" href="https://www.facebook.com/?locale=es_ES" tittle="facebook" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src={facebook} alt="logo_facebook" loading="lazy" />
+                            <img className="Footer-img" src="/facebook.svg" alt="logo_facebook" loading="lazy" />
                         </a>
                         </li>
                         <li><a className="Footer-a" href="https://www.instagram.com/?hl=es" title="instagram" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src={instagram} alt="logo_instagram" loading="lazy" />
+                            <img className="Footer-img" src="/instagram.svg" alt="logo_instagram" loading="lazy" />
                         </a>
                         </li>
                         <li><a className="Footer-a" href="https://twitter.com/?lang=es" title="logo_x" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src={x_logo} alt="logo_x" loading="lazy" />
+                            <img className="Footer-img" src="/x-logo.svg" alt="logo_x" loading="lazy" />
                         </a>
                         </li>
                     </ul>

@@ -1,7 +1,10 @@
-
+/* Estilos base (mantienen lo que ya tenías) */
 .Header-img{
     width: 60%;
     margin: 0 auto;
+    display: block; /* Para centrar la imagen correctamente */
+    max-height: 500px; /* Limitar altura en pantallas muy grandes */
+    object-fit: contain; /* Mantener proporción de la imagen */
 }
 
 .Header-h1{
@@ -9,6 +12,7 @@
     color: rgb(128, 128, 0);
     text-align: center;
     font-family: "Fuzzy Bubbles", sans-serif;
+    margin: 1.5rem 0; /* Espacio consistente arriba y abajo */
 }
 
 .Section-home{
@@ -17,7 +21,8 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem auto ;
+    margin: 3rem auto;
+    gap: 1.5rem; /* Espacio entre las tarjetas */
 }
 
 .Section-info{
@@ -29,8 +34,9 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     gap: 0.5rem;
+    transition: all 0.3s ease; /* Transiciones suaves en los cambios de tamaño */
 }
 
 .Section-icono{
@@ -40,12 +46,140 @@
 .Section-h2{
     color: white;
     font-size: 1.05em;
+    text-align: center;
 }
 
 .Section-p{
     font-size: 0.95em;
-    color: white;
+    color: white; 
     text-align: justify;
     font-weight: 300;
     line-height: 1.2rem;
+    overflow-y: auto; /* Permite scroll si el contenido excede la altura */
+}
+
+/* Media query para pantallas grandes (más de 1400px) */
+@media screen and (min-width: 1401px) {
+    .Header-img {
+        width: 50%; /* Imagen un poco más pequeña en proporción */
+        max-height: 600px;
+    }
+    
+    .Header-h1 {
+        font-size: 4rem; /* Título más grande */
+    }
+    
+    .Section-home {
+        width: 85%; /* Contenedor un poco más estrecho para mejor legibilidad */
+        margin: 4rem auto;
+    }
+    
+    .Section-info {
+        width: 480px; /* Tarjetas un poco más anchas */
+        height: 520px; /* Y más altas */
+    }
+    
+    .Section-h2 {
+        font-size: 1.2em;
+    }
+    
+    .Section-p {
+        font-size: 1em;
+        line-height: 1.4rem;
+    }
+}
+
+/* Media query para tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .Header-img {
+        width: 70%;
+    }
+    
+    .Header-h1 {
+        font-size: 2.8rem;
+    }
+    
+    .Section-home {
+        flex-flow: column nowrap; /* Cambiar a layout vertical */
+        gap: 2rem;
+    }
+    
+    .Section-info {
+        width: 90%; /* Ancho casi completo */
+        max-width: 600px; /* Con un máximo para mantener legibilidad */
+        height: auto; /* Altura automática según contenido */
+        min-height: 400px; /* Altura mínima */
+    }
+}
+
+/* Media query para tablets pequeñas y móviles grandes (481px - 767px) */
+@media screen and (max-width: 767px) {
+    .Header-img {
+        width: 85%;
+    }
+    
+    .Header-h1 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+    
+    .Section-home {
+        width: 100%;
+        margin: 2rem auto;
+    }
+    
+    .Section-info {
+        width: 90%;
+        padding: 1.2rem;
+        min-height: 350px;
+    }
+    
+    .Section-icono {
+        width: 3.8rem;
+    }
+    
+    .Section-h2 {
+        font-size: 1em;
+    }
+    
+    .Section-p {
+        font-size: 0.9em;
+        line-height: 1.2rem;
+    }
+}
+
+/* Media query para móviles (hasta 480px) */
+@media screen and (max-width: 480px) {
+    .Header-img {
+        width: 95%;
+    }
+    
+    .Header-h1 {
+        font-size: 1.8rem;
+        padding: 0 0.5rem;
+    }
+    
+    .Section-home {
+        margin: 1.5rem auto;
+        gap: 1.5rem;
+    }
+    
+    .Section-info {
+        width: 95%;
+        padding: 1rem;
+        min-height: 320px;
+    }
+    
+    .Section-icono {
+        width: 3.5rem;
+    }
+    
+    .Section-h2 {
+        font-size: 0.95em;
+    }
+    
+    .Section-p {
+        font-size: 0.85em;
+        line-height: 1.1rem;
+    }
 }

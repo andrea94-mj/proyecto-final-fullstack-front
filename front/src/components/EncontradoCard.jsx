@@ -9,6 +9,7 @@ const EncontradoCard = ({ imagen, tipo_de_animal, raza, color, genero, lugar_enc
     const [mostrarContacto, setMostrarContacto] = useState(false); // Estado para controlar si mostrar la información de contacto
     const [mostrarAlerta, setMostrarAlerta] = useState(false); // Estado para mostrar alerta si el usuario no está logueado
 
+    const URL_IMG = import.meta.env.VITE_BACKEND || 'http://localhost:3000'; // URL para la imagen
     
     const isActive = tipo_de_animal === "Gato" ? "Card isActive" : "Card";
 
@@ -24,14 +25,14 @@ const EncontradoCard = ({ imagen, tipo_de_animal, raza, color, genero, lugar_enc
         }
     };
 
+
+
     return (
         <>
             <div className="Card">
                 <section className={isActive}> 
                     <header className="Header-card">
-                        <img className="Card-img" src={imagen} alt={tipo_de_animal} />
-                         {/* <img className="Card-img" src={"/uploads/"} alt={tipo_de_animal} /> */}
-                         {/* La línea comentada sería una opción para mostrar la imagen desde el backend */}
+                        <img className="Card-img" src={`${URL_IMG}/uploads/${imagen}`} alt={tipo_de_animal} />
                     </header>
                     <div className="Card-info">
                         <p className="Card-p"><b>{tipo_de_animal}</b></p> 

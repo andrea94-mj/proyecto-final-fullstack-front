@@ -1,6 +1,7 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom"; 
 import { format } from "date-fns"; 
+import { parse } from 'date-fns'; 
 import "@/css/Card.css"; 
 
 // Componente para mostrar la tarjeta de una mascota perdida
@@ -9,6 +10,8 @@ const PerdidoCard = ({ imagen, nombre, tipo_de_animal, raza, color, genero, luga
 
   const [mostrarContacto, setMostrarContacto] = useState(false); // Estado para controlar si mostrar la información de contacto
   const [mostrarAlerta, setMostrarAlerta] = useState(false); // Estado para mostrar alerta si el usuario no está logueado
+
+  const URL_IMG = import.meta.env.VITE_BACKEND || 'http://localhost:3000'; // URL para la imagen
 
   const isActive = nombre === "Max" ? "Card isActive" : "Card";
   
@@ -28,9 +31,7 @@ const PerdidoCard = ({ imagen, nombre, tipo_de_animal, raza, color, genero, luga
     <div className="Card">
       <section className={isActive}>
         <header className="Header-card">
-          <img className="Card-img" src={imagen} alt={nombre} /> 
-          {/* <img className="Card-img" src={"/uploads/"} alt={tipo_de_animal} /> */}
-          {/* La línea comentada sería una opción para mostrar la imagen desde el backend */}
+        <img className="Card-img" src={`${URL_IMG}/uploads/${imagen}`} alt={tipo_de_animal} />
           <h1 className="Card-h1"><b>{nombre}</b></h1> 
         </header>
         <div className="Card-info">

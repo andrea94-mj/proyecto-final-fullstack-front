@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '@/hooks/useUser';
-import "@/css/Forms.css";
+import "@/css/forms.css";
 
 // Componente de formulario de registro de usuario
 const FormRegistro = () => {
