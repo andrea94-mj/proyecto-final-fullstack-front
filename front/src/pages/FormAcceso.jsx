@@ -5,11 +5,13 @@ import "@/css/forms.css";
 
 // Componente para el formulario de inicio de sesión
 const FormAcceso = () => {
-
     const [formData, setFormData] = useState({
         username: "",
         password: ""
     });
+    
+    // Estado para manejar errores de autenticación
+    const [error, setError] = useState("");
 
     // Función para actualizar el estado formData con los datos del formulario
     const handleChange = (e) => {
@@ -24,10 +26,25 @@ const FormAcceso = () => {
     const navigate = useNavigate();
 
     // Función para manejar el envío del formulario
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); // Hace que la información del formulario no aparezca en la URL
-        login(formData); // Inicia sesión con los datos ingresados
-        navigate("/"); // Redirige a la página principal después del inicio de sesión
+        
+        try {
+            // Asumimos que login ahora devuelve una promesa o tiene un callback
+            const result = await login(formData);
+            
+            // Si el login es exitoso, navegamos a la página principal
+            if (result && result.success) {
+                navigate("/");
+            } else {
+                // Si hay un mensaje específico de error, lo usamos
+                setError(result?.message || "Usuario no registrado o credenciales incorrectas");
+            }
+        } catch (err) {
+            // Capturamos cualquier error en el proceso de login
+            setError("Error en el inicio de sesión. Por favor, inténtalo de nuevo.");
+            console.error("Error durante el login:", err);
+        }
     };
 
     return (
@@ -35,6 +52,9 @@ const FormAcceso = () => {
             <article className="Article-form">
                 <p className='Form-p'>Accede a tu cuenta para publicar si has perdido/encontrado una mascota e interactuar con los usuarios:</p>
                 <form className="Form-acceso" onSubmit={handleSubmit} >
+
+                    {/* Mensaje de error */}
+                    {error && <div className="error-message" style={{ color: 'red', marginBottom: '15px' }}>{error}</div>}
 
                     {/* Campo de email */}
                     <label htmlFor="email">E-mail: </label>

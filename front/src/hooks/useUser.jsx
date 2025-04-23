@@ -33,6 +33,16 @@ export function UserProvider({ children }) {
                 body: JSON.stringify(userData)
             });
 
+            // Verificar si la respuesta es exitosa
+            if (!response.ok) {
+                // Si la respuesta no es exitosa, devolver un objeto con la información del error
+                const errorData = await response.json();
+                return { 
+                    success: false, 
+                    message: errorData.message || "Usuario no registrado o credenciales incorrectas" 
+                };
+            }
+
             const responseData = await response.json(); // Respuesta con el usuario y el token
             const usuario = responseData.data;
 
@@ -40,9 +50,16 @@ export function UserProvider({ children }) {
             localStorage.setItem("user", JSON.stringify(usuario)); // Guardar el usuario en LocalStorage
             localStorage.setItem('token', responseData.token); // Guardar el token JWT en LocalStorage
 
+            // Devolver un objeto que indique que el login fue exitoso
+            return { success: true };
+
         } catch (e) {
             console.error('Error:', e); 
-            return "Error en el servidor"; 
+            // Devolver un objeto con la información del error
+            return { 
+                success: false, 
+                message: "Error en el servidor. Por favor, inténtalo más tarde." 
+            }; 
         }
     };
 
@@ -58,6 +75,16 @@ export function UserProvider({ children }) {
                 body: JSON.stringify(userData)
             });
             
+            // Verificar si la respuesta es exitosa
+            if (!response.ok) {
+                // Si la respuesta no es exitosa, devolver un objeto con la información del error
+                const errorData = await response.json();
+                return { 
+                    success: false, 
+                    message: errorData.message || "Error al registrar el usuario" 
+                };
+            }
+            
             const responseData = await response.json();
             const usuario = responseData.data;
 
@@ -65,10 +92,15 @@ export function UserProvider({ children }) {
             localStorage.setItem('user', JSON.stringify(usuario)); // Guardar el usuario en LocalStorage
             localStorage.setItem('token', responseData.token); // Guardar el token JWT en LocalStorage
 
-            return null; 
+            // Devolver un objeto que indique que el registro fue exitoso
+            return { success: true };
         } catch (e) {
             console.error('Error:', e);
-            return "Error en el servidor"; 
+            // Devolver un objeto con la información del error
+            return { 
+                success: false, 
+                message: "Error en el servidor. Por favor, inténtalo más tarde." 
+            };
         }
     };
 
