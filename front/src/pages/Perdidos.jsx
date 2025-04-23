@@ -20,16 +20,21 @@ const Perdidos = () => {
 
     // Función asíncrona para obtener el catálogo de mascotas perdidas desde la API
     const getCatalogo = async (url) => {
-        const respuesta = await fetch(url);
-        const objeto = await respuesta.json();
+        try {
+            const respuesta = await fetch(url);
+            const objeto = await respuesta.json();
 
-        // Manejo de errores en la respuesta de la API
-        if (objeto.error) {
-            setErrorData("No se han encontrado resultados");
-            setCatalogo([]);
-        } else {
-            setErrorData("");
-            setCatalogo(objeto.data);
+            // Manejo de errores en la respuesta de la API
+            if (objeto.error) {
+                setErrorData("No se han encontrado resultados");
+                setCatalogo([]);
+            } else {
+                setErrorData("");
+                setCatalogo(objeto.data);
+            }
+        } catch (error) {
+            setErrorData("Error al cargar los datos. Inténtalo de nuevo.");
+            console.error("Error fetching data:", error);
         }
     };
 
@@ -38,21 +43,25 @@ const Perdidos = () => {
             <header className="Header-perdidos">
                 <h1 className="Perdidos-h1">Mascotas Perdidas</h1>
                 <p className="Perdidos-p">
-                    En esta sección podrás ver las mascotas que han sido reportadas como perdidas. <br />
+                    En esta sección podrás ver las mascotas que han sido reportadas como perdidas.
                     Si tienes información sobre alguna de ellas, por favor contacta con la persona indicada.
                 </p>
             </header>
-            <div>
-                {/* Botón para registrar una mascota perdida */}
-                <Link to="/mascota"><button>Pulsa aquí para registrar a tu mascota perdida</button></Link>
+
+            {/* Botón para registrar una mascota perdida */}
+            <div className="registro-mascota-btn">
+                <Link to="/mascota"><button>Registrar mascota perdida</button></Link>
             </div>
+
             <section className="Perdidos-container">
                 {/* Mostrar mensaje de error o catálogo de mascotas perdidas */}
                 {errorData ? (
-                    <p>{errorData}</p>
+                    <p className="mensaje-error">{errorData}</p>
+                ) : catalogo.length === 0 ? (
+                    <p className="cargando-datos">Cargando datos...</p>
                 ) : (
-                    catalogo.map((catalogo) => (
-                        <PerdidoCard key={catalogo._id} {...catalogo} isLoggedIn={!!user} />
+                    catalogo.map((mascota) => (
+                        <PerdidoCard key={mascota._id} {...mascota} isLoggedIn={!!user} />
                     ))
                 )}
             </section>

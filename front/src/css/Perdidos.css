@@ -26,3 +26,96 @@
     gap: 1rem; 
     padding: 1rem;
 }
+
+.registro-mascota-btn {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.mensaje-error {
+    color: #D32F2F;
+    text-align: center;
+    grid-column: span 4;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.cargando-datos {
+    text-align: center;
+    grid-column: span 4;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .Perdidos-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .Header-perdidos {
+        width: 50%;
+    }
+    .mensaje-error, .cargando-datos {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .Perdidos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .Header-perdidos {
+        width: 70%;
+    }
+    
+    .Perdidos-h1 {
+        font-size: 2rem;
+    }
+    .mensaje-error, .cargando-datos {
+        grid-column: span 2;
+    }
+    
+    .btn-registrar-perdido {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Perdidos-container {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    
+    .Header-perdidos {
+        width: 90%;
+    }
+    
+    .Perdidos-h1 {
+        font-size: 1.8rem;
+    }
+    
+    .Perdidos-p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .mensaje-error, .cargando-datos {
+        grid-column: span 1;
+    }
+    
+    .btn-registrar-perdido {
+        width: 90%;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+
+
+
+

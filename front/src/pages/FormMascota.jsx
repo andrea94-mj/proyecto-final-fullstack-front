@@ -10,7 +10,7 @@ const FormMascota = () => {
       <article className='Registro-mascota'>
         {/* Sección para registrar una mascota encontrada */}
         <div>
-          <p className='Form-p--registro'>¿Te has encontrado una mascota? <br />Regístrala aquí</p>
+          <p className='Form-p--registro'>¿Has encontrado una mascota? <br />Regístrala aquí</p>
           <RegistroEncontrado />
         </div>
 

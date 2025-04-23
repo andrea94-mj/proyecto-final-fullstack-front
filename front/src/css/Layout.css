@@ -96,9 +96,9 @@
 }
 
 
-/* RESPONSIVE HEADER */
 
-/* ======== PANTALLAS GRANDES (≥1401px) ======== */
+/* RESPONSIVE */
+
 @media screen and (min-width: 1401px) {
   .Secction-img {
     width: 30rem;
@@ -124,10 +124,20 @@
   .Header-li--logout {
     font-size: 1rem;
   }
+  .Secction-footer {
+    padding: 2.5rem 4rem;
+  }
+
+  .Footer-li {
+    font-size: 1em;
+  }
+
+  .Footer-img {
+    width: 2rem;
+  }
 }
 
 
-/* ======== TABLETS (768px - 1024px) ======== */
 @media screen and (max-width: 1024px) {
   .Secction-header {
     flex-direction: column;
@@ -136,7 +146,7 @@
   }
 
   .Secction-img {
-    width: 18rem;
+    width: 20rem;
   }
 
   .Header-ul {
@@ -152,10 +162,26 @@
   .Usuario {
     justify-content: center;
   }
+  .Secction-footer {
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .Footer-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .Footer-img {
+    width: 1.5rem;
+  }
 }
 
-
-/* ======== MÓVILES GRANDES Y TABLETS PEQUEÑAS (481px - 767px) ======== */
 @media screen and (max-width: 767px) {
   .Secction-header {
     flex-direction: column;
@@ -164,7 +190,7 @@
   }
 
   .Secction-img {
-    width: 14rem;
+    width: 18rem;
   }
 
   .Header-ul {
@@ -190,10 +216,29 @@
   .Header-li, .Header-li--logout {
     font-size: 1rem;
   }
+  .Secction-footer {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .Footer-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .Footer-li {
+    font-size: 0.85em;
+  }
+
+  .Footer-img {
+    width: 1.4rem;
+  }
 }
 
 
-/* ======== MÓVILES PEQUEÑOS (≤480px) ======== */
 @media screen and (max-width: 480px) {
   .Secction-img {
     width: 12rem;
@@ -219,77 +264,6 @@
   .Usuario-h3 {
     font-size: 0.8rem;
   }
-}
-
-
-/* RESPONSIVE FOOTER */
-
-/* ========== PANTALLAS GRANDES (≥1401px) ========== */
-@media screen and (min-width: 1401px) {
-  .Secction-footer {
-    padding: 2.5rem 4rem;
-  }
-
-  .Footer-li {
-    font-size: 1em;
-  }
-
-  .Footer-img {
-    width: 2rem;
-  }
-}
-
-
-/* ========== TABLETS (768px - 1024px) ========== */
-@media screen and (max-width: 1024px) {
-  .Secction-footer {
-    flex-flow: column nowrap;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
-  }
-
-  .Footer-ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .Footer-img {
-    width: 1.5rem;
-  }
-}
-
-
-/* ========== MÓVILES GRANDES (481px - 767px) ========== */
-@media screen and (max-width: 767px) {
-  .Secction-footer {
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
-  }
-
-  .Footer-ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .Footer-li {
-    font-size: 0.85em;
-  }
-
-  .Footer-img {
-    width: 1.4rem;
-  }
-}
-
-
-/* ========== MÓVILES PEQUEÑOS (≤480px) ========== */
-@media screen and (max-width: 480px) {
   .Secction-footer {
     padding: 1rem;
     gap: 1rem;
@@ -309,6 +283,7 @@
     width: 1.2rem;
   }
 }
+
 
 
 

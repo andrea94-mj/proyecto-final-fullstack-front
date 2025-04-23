@@ -123,3 +123,47 @@ button:hover{
     color: rgb(164, 164, 164);
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .Article-form{
+        width: 100%;
+        height: auto;
+    }
+    .Form-mascota{
+        width: 90%;
+    }
+    .Form-registro{
+        width: 90%;
+    }
+    .Form-acceso{
+        width: 90%;
+    }
+    .Form-p{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .Form-p--acceso{
+        margin-bottom: 1.5rem;
+    }
+    .Form-registro{
+        margin-bottom: 1.5rem;
+    }
+    .Registro-mascota{
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .Form-p{
+        width: 80%;
+        font-size: 1.2rem;
+    }
+    .Registro-mascota{
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+

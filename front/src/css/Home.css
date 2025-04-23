@@ -1,10 +1,10 @@
-/* Estilos base (mantienen lo que ya tenías) */
+
 .Header-img{
     width: 60%;
     margin: 0 auto;
-    display: block; /* Para centrar la imagen correctamente */
-    max-height: 500px; /* Limitar altura en pantallas muy grandes */
-    object-fit: contain; /* Mantener proporción de la imagen */
+    display: block; 
+    max-height: 500px; 
+    object-fit: contain; 
 }
 
 .Header-h1{
@@ -12,7 +12,7 @@
     color: rgb(128, 128, 0);
     text-align: center;
     font-family: "Fuzzy Bubbles", sans-serif;
-    margin: 1.5rem 0; /* Espacio consistente arriba y abajo */
+    margin: 1.5rem 0; 
 }
 
 .Section-home{
@@ -22,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 3rem auto;
-    gap: 1.5rem; /* Espacio entre las tarjetas */
+    gap: 1.5rem; 
 }
 
 .Section-info{
@@ -36,7 +36,7 @@
     align-items: center;
     padding: 1.5rem;
     gap: 0.5rem;
-    transition: all 0.3s ease; /* Transiciones suaves en los cambios de tamaño */
+    transition: all 0.3s ease; 
 }
 
 .Section-icono{
@@ -49,34 +49,39 @@
     text-align: center;
 }
 
-.Section-p{
+.Section-p {
     font-size: 0.95em;
     color: white; 
     text-align: justify;
     font-weight: 300;
     line-height: 1.2rem;
-    overflow-y: auto; /* Permite scroll si el contenido excede la altura */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(132, 148, 0, 0.7) rgb(128, 128, 0);
 }
 
-/* Media query para pantallas grandes (más de 1400px) */
+
+
+/* RESPONSIVE */
+
 @media screen and (min-width: 1401px) {
     .Header-img {
-        width: 50%; /* Imagen un poco más pequeña en proporción */
+        width: 50%; 
         max-height: 600px;
     }
     
     .Header-h1 {
-        font-size: 4rem; /* Título más grande */
+        font-size: 4rem; 
     }
     
     .Section-home {
-        width: 85%; /* Contenedor un poco más estrecho para mejor legibilidad */
+        width: 85%; 
         margin: 4rem auto;
     }
     
     .Section-info {
-        width: 480px; /* Tarjetas un poco más anchas */
-        height: 520px; /* Y más altas */
+        width: 480px; 
+        height: 520px; 
     }
     
     .Section-h2 {
@@ -89,8 +94,8 @@
     }
 }
 
-/* Media query para tablets (768px - 1024px) */
-@media screen and (max-width: 1024px) {
+
+@media (max-width: 1200px) {
     .Header-img {
         width: 70%;
     }
@@ -100,20 +105,20 @@
     }
     
     .Section-home {
-        flex-flow: column nowrap; /* Cambiar a layout vertical */
+        flex-flow: column nowrap; 
         gap: 2rem;
     }
     
     .Section-info {
-        width: 90%; /* Ancho casi completo */
-        max-width: 600px; /* Con un máximo para mantener legibilidad */
-        height: auto; /* Altura automática según contenido */
-        min-height: 400px; /* Altura mínima */
+        width: 90%; 
+        max-width: 600px; 
+        height: auto; 
+        min-height: 400px; 
     }
 }
 
-/* Media query para tablets pequeñas y móviles grandes (481px - 767px) */
-@media screen and (max-width: 767px) {
+
+@media (max-width: 900px) {
     .Header-img {
         width: 85%;
     }
@@ -148,8 +153,8 @@
     }
 }
 
-/* Media query para móviles (hasta 480px) */
-@media screen and (max-width: 480px) {
+
+@media (max-width: 600px) {
     .Header-img {
         width: 95%;
     }
