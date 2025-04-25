@@ -7,11 +7,14 @@ import Perdidos from "@/pages/Perdidos";
 import FormRegistro from "@/pages/FormRegistro";
 import FormAcceso from "@/pages/FormAcceso";
 import Admin from "@/pages/Admin";
-import FormMascota from "../pages/FormMascota";
+import FormMascota from "@/pages/FormMascota";
+import EditarPerdido from "@/pages/EditarPerdido";
+import EditarEncontrado from "@/pages/EditarEncontrado";
 
 // Páginas especiales:
 import Layout from "@/Layout";
 import PrivateRoute from "@/components/PrivateRoute";
+import AdminRoute from "@/components/AdminRoute";
 
 
 const router = createBrowserRouter([{
@@ -25,7 +28,7 @@ const router = createBrowserRouter([{
         },
         {
             path: 'administrador',
-            element: <PrivateRoute><Admin/></PrivateRoute>
+            element: <AdminRoute><Admin/></AdminRoute>
         },
         {
             path: 'encontrados',
@@ -46,8 +49,15 @@ const router = createBrowserRouter([{
         {
             path: 'mascota',
             element: <PrivateRoute><FormMascota/></PrivateRoute>
+        },
+        {
+            path: 'editar-perdido/:id',
+            element: <AdminRoute><EditarPerdido/></AdminRoute>
+        },
+        {
+            path: 'editar-encontrado/:id',
+            element: <AdminRoute><EditarEncontrado/></AdminRoute>
         }
-
     ]
 }]);
 

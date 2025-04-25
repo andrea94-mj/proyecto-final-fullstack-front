@@ -27,7 +27,7 @@ const Header = () => {
                                 </li>
                                 <h3 className="Usuario-h3">{user.name}</h3> {/* Muestra el nombre del usuario */}
                             </div>
-                            <li><NavLink onClick={logout} className="Header-li--logout">Salir</NavLink></li> {/* Enlace para cerrar sesión */}
+                            <li><NavLink onClick={logout} className="Header-li--logout"><b>X</b></NavLink></li> {/* Enlace para cerrar sesión */}
                             </>
                         ) : (
                             <>
@@ -35,6 +35,9 @@ const Header = () => {
                             <li><NavLink to="/acceso" className="Header-li"><b>Acceso</b></NavLink></li> {/* Enlace a la página de acceso */}
                             </>
                         )}
+                        {user && user.role === 'admin' && (
+                            <li><NavLink to="/administrador" className="Header-li"><b>Panel Admin</b></NavLink></li>
+                        )} {/* Enlace al panel de administrador */}
                     </ul>
                 </nav>
             </section>
