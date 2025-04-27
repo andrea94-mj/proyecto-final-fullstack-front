@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "@/css/home.css";
+import "../css/home.css";
 
 // Componente principal para la página de inicio
 const Home = () => {
