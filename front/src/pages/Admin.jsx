@@ -39,49 +39,61 @@ const Admin = () => {
     cargarDatos();
   }, []);
 
-  // Función para eliminar una mascota perdida
-  const eliminarPerdido = async (id) => {
-    if (window.confirm('¿Estás seguro de que quieres eliminar esta mascota?')) {
-      try {
-        const response = await fetch(`${URL}/perdidos/${id}`, {
-          method: 'DELETE',
-        });
-        
-        if (response.ok) {
-          // Actualizar el estado eliminando la mascota
-          setPerdidos(perdidos.filter(mascota => mascota._id !== id));
-          alert('Mascota eliminada correctamente');
-        } else {
-          alert('Error al eliminar la mascota');
+// Función para eliminar una mascota perdida
+const eliminarPerdido = async (id) => {
+  if (window.confirm('¿Estás seguro de que quieres eliminar esta mascota?')) {
+    try {
+      // Obtener el token del localStorage
+      const token = localStorage.getItem('token');
+      
+      const response = await fetch(`${URL}/perdidos/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
         }
-      } catch (error) {
-        console.error("Error al eliminar:", error);
-        alert("Error de conexión al eliminar la mascota");
+      });
+      
+      if (response.ok) {
+        // Actualizar el estado eliminando la mascota
+        setPerdidos(perdidos.filter(mascota => mascota._id !== id));
+        alert('Mascota eliminada correctamente');
+      } else {
+        alert('Error al eliminar la mascota: No autorizado');
       }
+    } catch (error) {
+      console.error("Error al eliminar:", error);
+      alert("Error de conexión al eliminar la mascota");
     }
-  };
+  }
+};
 
-  // Función para eliminar una mascota encontrada
-  const eliminarEncontrado = async (id) => {
-    if (window.confirm('¿Estás seguro de que quieres eliminar esta mascota?')) {
-      try {
-        const response = await fetch(`${URL}/encontrados/${id}`, {
-          method: 'DELETE',
-        });
-        
-        if (response.ok) {
-          // Actualizar el estado eliminando la mascota
-          setEncontrados(encontrados.filter(mascota => mascota._id !== id));
-          alert('Mascota eliminada correctamente');
-        } else {
-          alert('Error al eliminar la mascota');
+// Función para eliminar una mascota encontrada
+const eliminarEncontrado = async (id) => {
+  if (window.confirm('¿Estás seguro de que quieres eliminar esta mascota?')) {
+    try {
+      // Obtener el token del localStorage
+      const token = localStorage.getItem('token');
+      
+      const response = await fetch(`${URL}/encontrados/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
         }
-      } catch (error) {
-        console.error("Error al eliminar:", error);
-        alert("Error de conexión al eliminar la mascota");
+      });
+      
+      if (response.ok) {
+        // Actualizar el estado eliminando la mascota
+        setEncontrados(encontrados.filter(mascota => mascota._id !== id));
+        alert('Mascota eliminada correctamente');
+      } else {
+        alert('Error al eliminar la mascota: No autorizado');
       }
+    } catch (error) {
+      console.error("Error al eliminar:", error);
+      alert("Error de conexión al eliminar la mascota");
     }
-  };
+  }
+};
 
   return (
     <div className="admin-container">
@@ -89,18 +101,8 @@ const Admin = () => {
       
       {/* Selector de pestañas */}
       <div className="admin-tabs">
-        <button 
-          className={activeTab === 'perdidos' ? 'active' : ''}
-          onClick={() => setActiveTab('perdidos')}
-        >
-          Mascotas Perdidas
-        </button>
-        <button 
-          className={activeTab === 'encontrados' ? 'active' : ''}
-          onClick={() => setActiveTab('encontrados')}
-        >
-          Mascotas Encontradas
-        </button>
+        <button className={activeTab === 'perdidos' ? 'active' : ''} onClick={() => setActiveTab('perdidos')}> Mascotas Perdidas</button>
+        <button className={activeTab === 'encontrados' ? 'active' : ''} onClick={() => setActiveTab('encontrados')}> Mascotas Encontradas</button>
       </div>
 
       {loading ? (
@@ -134,15 +136,8 @@ const Admin = () => {
                         <td>{mascota.lugar_perdido}</td>
                         <td>{new Date(mascota.fecha_perdido).toLocaleDateString()}</td>
                         <td>
-                          <Link to={`/editar-perdido/${mascota._id}`} className="btn-editar">
-                            Editar
-                          </Link>
-                          <button 
-                            onClick={() => eliminarPerdido(mascota._id)}
-                            className="btn-eliminar"
-                          >
-                            Eliminar
-                          </button>
+                          <Link to={`/editar-perdido/${mascota._id}`} className="btn-editar"> Editar</Link>
+                          <button onClick={() => eliminarPerdido(mascota._id)} className="btn-eliminar">Eliminar</button>
                         </td>
                       </tr>
                     ))}
@@ -177,15 +172,8 @@ const Admin = () => {
                         <td>{mascota.lugar_encontrado}</td>
                         <td>{new Date(mascota.fecha_encontrado).toLocaleDateString()}</td>
                         <td>
-                          <Link to={`/editar-encontrado/${mascota._id}`} className="btn-editar">
-                            Editar
-                          </Link>
-                          <button 
-                            onClick={() => eliminarEncontrado(mascota._id)}
-                            className="btn-eliminar"
-                          >
-                            Eliminar
-                          </button>
+                          <Link to={`/editar-encontrado/${mascota._id}`} className="btn-editar">Editar</Link>
+                          <button onClick={() => eliminarEncontrado(mascota._id)} className="btn-eliminar">Eliminar</button>
                         </td>
                       </tr>
                     ))}

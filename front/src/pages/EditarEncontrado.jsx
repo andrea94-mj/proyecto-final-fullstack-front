@@ -94,41 +94,49 @@ const EditarEncontrado = () => {
   };
 
   // Envío del formulario
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+// Envío del formulario
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  // Crear FormData para enviar los datos
+  const data = new FormData();
+  
+  // Añadir todos los campos al FormData
+  Object.keys(formData).forEach(key => {
+    if (key !== 'imagen') {
+      data.append(key, formData[key]);
+    }
+  });
+  
+  // Si hay una nueva imagen, añadirla
+  if (nuevaImagen) {
+    data.append('imagen', nuevaImagen);
+  }
+  
+  try {
+    // Obtener el token del localStorage
+    const token = localStorage.getItem('token');
     
-    // Crear FormData para enviar los datos
-    const data = new FormData();
-    
-    // Añadir todos los campos al FormData
-    Object.keys(formData).forEach(key => {
-      if (key !== 'imagen') {
-        data.append(key, formData[key]);
-      }
+    const response = await fetch(`${URL}/encontrados/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      },
+      body: data
     });
     
-    // Si hay una nueva imagen, añadirla
-    if (nuevaImagen) {
-      data.append('imagen', nuevaImagen);
+    if (response.ok) {
+      alert('Mascota actualizada correctamente');
+      navigate('/administrador');
+    } else {
+      const errorData = await response.json();
+      alert(`Error al actualizar la mascota: ${errorData.message || 'No autorizado'}`);
     }
-    
-    try {
-      const response = await fetch(`${URL}/encontrados/${id}`, {
-        method: 'PUT',
-        body: data
-      });
-      
-      if (response.ok) {
-        alert('Mascota actualizada correctamente');
-        navigate('/administrador');
-      } else {
-        alert('Error al actualizar la mascota');
-      }
-    } catch (error) {
-      console.error("Error en el envío:", error);
-      alert("Error de conexión o de servidor");
-    }
-  };
+  } catch (error) {
+    console.error("Error en el envío:", error);
+    alert("Error de conexión o de servidor");
+  }
+};
 
   if (loading) {
     return <p>Cargando datos de la mascota...</p>;
@@ -198,6 +206,7 @@ const EditarEncontrado = () => {
         {/* Botones de acción */}
         <div className="form-buttons">
           <button type="submit">Actualizar Mascota</button>
+          <br />
           <button type="button" onClick={() => navigate('/administrador')} className="btn-cancelar">
             Cancelar
           </button>
