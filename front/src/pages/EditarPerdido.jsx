@@ -141,124 +141,65 @@ const EditarPerdido = () => {
       <h2>Editar Mascota Perdida</h2>
       
       <form className='Form-mascota' onSubmit={handleSubmit}>
-        {/* Previsualización de la imagen */}
-        {imagenPreview && (
-          <div className="imagen-preview">
-            <img src={imagenPreview} alt="Vista previa" style={{ maxWidth: '200px', marginBottom: '15px' }} />
-          </div>
-        )}
         
         {/* Campo para seleccionar la imagen */}
         <div>
           <label>Imagen:</label>
           <input type="file" name="imagen" onChange={handleImageChange} accept="image/*" />
-          <small>Deja este campo vacío si no quieres cambiar la imagen.</small>
         </div>
         
         {/* Campo para nombre */}
         <div>
           <label>Nombre:</label>
-          <input 
-            type="text"
-            name="nombre"
-            value={formData.nombre}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required/>
         </div>
         
         {/* Campo para tipo de animal */}
         <div>
           <label>Tipo de Animal:</label>
-          <input 
-            type="text"
-            name="tipo_de_animal"
-            value={formData.tipo_de_animal}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" name="tipo_de_animal" value={formData.tipo_de_animal} onChange={handleChange} required/>
         </div>
         
         {/* Campo para raza */}
         <div>
           <label>Raza:</label>
-          <input 
-            type="text"
-            name="raza"
-            value={formData.raza}
-            onChange={handleChange}
-          />
+          <input type="text" name="raza" value={formData.raza} onChange={handleChange}/>
         </div>
         
         {/* Campo para color */}
         <div>
           <label>Color:</label>
-          <input 
-            type="text"
-            name="color"
-            value={formData.color}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" name="color" value={formData.color} onChange={handleChange} required/>
         </div>
         
         {/* Campo para género */}
         <div>
           <label>Género:</label>
-          <input 
-            type="text"
-            name="genero"
-            value={formData.genero}
-            onChange={handleChange}
-          />
+          <input type="text" name="genero" value={formData.genero} onChange={handleChange}/>
         </div>
         
         {/* Campo para lugar perdido */}
         <div>
           <label>¿Dónde se perdió?</label>
-          <input 
-            type="text"
-            name="lugar_perdido"
-            value={formData.lugar_perdido}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" name="lugar_perdido" value={formData.lugar_perdido} onChange={handleChange} required/>
         </div>
         
         {/* Campo para fecha perdido */}
         <div>
           <label>¿Cuándo se perdió?</label>
-          <input 
-            type="date"
-            name="fecha_perdido"
-            value={formData.fecha_perdido}
-            onChange={handleChange}
-            required
-          />
+          <input type="date" name="fecha_perdido" value={formData.fecha_perdido} onChange={handleChange} required/>
         </div>
         
         {/* Campo para nombre de contacto */}
         <div>
           <label>Nombre de Contacto:</label>
-          <input 
-            type="text"
-            name="contacto_nombre"
-            value={formData.contacto_nombre}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" name="contacto_nombre" value={formData.contacto_nombre} onChange={handleChange} required/>
         </div>
         
         {/* Campo para teléfono de contacto */}
         <div>
           <label>Teléfono de Contacto:</label>
-          <input 
-            type="tel"
-            name="contacto_telefono"
-            value={formData.contacto_telefono}
-            onChange={handleChange}
-            required
-          />
+          <input type="tel" name="contacto_telefono" value={formData.contacto_telefono} onChange={handleChange} required/>
         </div>
         
         {/* Botones de acción */}

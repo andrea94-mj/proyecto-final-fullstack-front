@@ -117,7 +117,6 @@ const Admin = () => {
                 <table>
                   <thead>
                     <tr>
-                      <th>Imagen</th>
                       <th>Nombre</th>
                       <th>Tipo</th>
                       <th>Color</th>
@@ -129,15 +128,6 @@ const Admin = () => {
                   <tbody>
                     {perdidos.map((mascota) => (
                       <tr key={mascota._id}>
-                        <td>
-                          {mascota.imagen && (
-                            <img 
-                              src={`${URL}/${mascota.imagen}`} 
-                              alt={mascota.nombre || 'Mascota perdida'} 
-                              className="mascota-thumbnail"
-                            />
-                          )}
-                        </td>
                         <td>{mascota.nombre || 'Sin nombre'}</td>
                         <td>{mascota.tipo_de_animal}</td>
                         <td>{mascota.color}</td>
@@ -172,7 +162,6 @@ const Admin = () => {
                 <table>
                   <thead>
                     <tr>
-                      <th>Imagen</th>
                       <th>Tipo</th>
                       <th>Color</th>
                       <th>Ubicación</th>
@@ -183,15 +172,6 @@ const Admin = () => {
                   <tbody>
                     {encontrados.map((mascota) => (
                       <tr key={mascota._id}>
-                        <td>
-                          {mascota.imagen && (
-                            <img 
-                              src={`${URL}/${mascota.imagen}`} 
-                              alt={`Mascota encontrada`} 
-                              className="mascota-thumbnail"
-                            />
-                          )}
-                        </td>
                         <td>{mascota.tipo_de_animal}</td>
                         <td>{mascota.color}</td>
                         <td>{mascota.lugar_encontrado}</td>

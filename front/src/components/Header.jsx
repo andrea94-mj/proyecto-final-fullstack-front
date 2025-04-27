@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom"; 
 import { useUser } from "@/hooks/useUser"; 
 
-
 const Header = () => {
-
     // Obtiene el estado de usuario y la función de logout del hook useUser
     const { user, logout } = useUser();
 
@@ -19,25 +17,27 @@ const Header = () => {
 
                         {user ? (
                             <>
-                            {/* Si el usuario está logueado, muestra las opciones correspondientes */}
-                            <li><NavLink to="/mascota" className="Header-li"><b>Registrar Mascota</b></NavLink></li> {/* Enlace para registrar una nueva mascota */}
+                            {/* Mostrar "Registrar Mascota" solo si el usuario NO es administrador */}
+                            {user.role !== 'admin' && (
+                                <li><NavLink to="/mascota" className="Header-li"><b>Registrar Mascota</b></NavLink></li>
+                            )}
                             <div className="Usuario">
                                 <li>
-                                    <img className="Usuario-img" src={user.image} alt={user.username} /> {/* Muestra la imagen de perfil del usuario */}
+                                    <img className="Usuario-img" src={user.image} alt={user.username} />
                                 </li>
-                                <h3 className="Usuario-h3">{user.name}</h3> {/* Muestra el nombre del usuario */}
+                                <h3 className="Usuario-h3">{user.name}</h3>
                             </div>
-                            <li><NavLink onClick={logout} className="Header-li--logout"><b>X</b></NavLink></li> {/* Enlace para cerrar sesión */}
+                            <li><NavLink onClick={logout} className="Header-li--logout"><b>X</b></NavLink></li>
                             </>
                         ) : (
                             <>
-                            {/* Si el usuario no está logueado, muestra el enlace de acceso */}
-                            <li><NavLink to="/acceso" className="Header-li"><b>Acceso</b></NavLink></li> {/* Enlace a la página de acceso */}
+                            <li><NavLink to="/acceso" className="Header-li"><b>Acceso</b></NavLink></li>
                             </>
                         )}
+                        {/* Mostrar enlace al panel de administrador si el usuario es admin */}
                         {user && user.role === 'admin' && (
                             <li><NavLink to="/administrador" className="Header-li"><b>Panel Admin</b></NavLink></li>
-                        )} {/* Enlace al panel de administrador */}
+                        )}
                     </ul>
                 </nav>
             </section>

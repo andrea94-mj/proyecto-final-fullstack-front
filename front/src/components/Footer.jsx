@@ -22,7 +22,7 @@ const Footer = () => {
                             <li className="Footer-li"><Link to="/">Aviso Legal</Link></li>
                             <li className="Footer-li"><Link to="/">Política de privacidad</Link></li>
                             <li className="Footer-li"><Link to="/">Política de cookies</Link></li>
-                            <li><b><p className="Footer-p">&copy; 2021 - 2024 BuscaMascotas</p></b></li>
+                            <li><b><p className="Footer-p">&copy; 2021 - 2025 BuscaMascotas</p></b></li>
                         </ul>
                     </nav>
                 </div>
