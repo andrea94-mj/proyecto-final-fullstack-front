@@ -1,7 +1,7 @@
 import React from 'react';
 import RegistroEncontrado from '@/components/RegistroEncontrado';
 import RegistroPerdido from '@/components/RegistroPerdido';
-import "@/css/forms.css";
+import "@/css/Forms.css";
 
 // Componente para seleccionar y mostrar el formulario adecuado según el tipo de registro (perdido o encontrado)
 const FormMascota = () => {

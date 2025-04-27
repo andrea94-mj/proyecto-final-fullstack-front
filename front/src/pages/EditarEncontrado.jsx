@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import '@/css/forms.css';
+import '@/css/Forms.css';
 
 const EditarEncontrado = () => {
   const { id } = useParams();

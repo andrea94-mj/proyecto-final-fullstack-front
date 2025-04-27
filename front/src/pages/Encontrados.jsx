@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import EncontradoCard from "@/components/EncontradoCard";
 import { useUser } from "@/hooks/useUser";
 import { Link } from "react-router-dom";
-import "@/css/encontrados.css";
+import "@/css/Encontrados.css";
 
 // Componente para mostrar el catálogo de mascotas encontradas
 const Encontrados = () => {

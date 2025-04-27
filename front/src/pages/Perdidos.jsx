@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PerdidoCard from "../components/PerdidoCard";
 import { useUser } from "@/hooks/useUser";
 import { Link } from 'react-router-dom'
-import "@/css/perdidos.css";
+import "@/css/Perdidos.css";
 
 // Componente principal para mostrar la sección de mascotas perdidas
 const Perdidos = () => {

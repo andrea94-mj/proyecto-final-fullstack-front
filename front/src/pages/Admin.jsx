@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '@/css/admin.css'; 
+import '@/css/Admin.css'; 
 
 const Admin = () => {
   // Estados para almacenar los datos
