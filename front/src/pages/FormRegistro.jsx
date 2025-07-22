@@ -43,9 +43,9 @@ const FormRegistro = () => {
 
     return (
         <>
-            <article className='Article-form'>
-                <p className='Form-p'>Si todavía no tienes cuenta con nosotros, regístrate con estos sencillos pasos para acceder a más contenido</p>
-                <form className='Form-registro' onSubmit={handleSubmit}>
+            <article className='article-form'>
+                <p className='form-p'>Si todavía no tienes cuenta con nosotros, regístrate con estos sencillos pasos para acceder a más contenido</p>
+                <form className='form-registro' onSubmit={handleSubmit}>
 
                     {/* Campo de nombre */}
                     <label htmlFor="nombre">Escribe tu nombre: </label>
@@ -64,7 +64,7 @@ const FormRegistro = () => {
 
                     {/* Botón de registro o mensaje de advertencia */}
                     {canSubmit ? <button type='submit'>Registro</button>
-                        : <p className='Submit-p'>Acepte los términos y condiciones para continuar</p>}
+                        : <p className='submit-p'>Acepte los términos y condiciones para continuar</p>}
                     <br />
                 </form>
             </article>

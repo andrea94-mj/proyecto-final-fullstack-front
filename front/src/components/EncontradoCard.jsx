@@ -11,7 +11,7 @@ const EncontradoCard = ({ imagen, tipo_de_animal, raza, color, genero, lugar_enc
 
     const URL_IMG = import.meta.env.VITE_BACKEND || 'http://localhost:3000'; // URL para la imagen
     
-    const isActive = tipo_de_animal === "Gato" ? "Card isActive" : "Card";
+    const isActive = tipo_de_animal === "Gato" ? "card isActive" : "card";
 
     // Formatea la fecha de la mascota encontrada
     const fechaFormateada = format(new Date(fecha_encontrado), 'yyyy-MM-dd');
@@ -29,35 +29,35 @@ const EncontradoCard = ({ imagen, tipo_de_animal, raza, color, genero, lugar_enc
 
     return (
         <>
-            <div className="Card">
+            <div className="card">
                 <section className={isActive}> 
-                    <header className="Header-card">
-                        <img className="Card-img" src={`${URL_IMG}/uploads/${imagen}`} alt={tipo_de_animal} />
+                    <header className="header-card">
+                        <img className="card-img" src={`${URL_IMG}/uploads/${imagen}`} alt={tipo_de_animal} loading="lazy"/>
                     </header>
-                    <div className="Card-info">
-                        <p className="Card-p"><b>{tipo_de_animal}</b></p> 
-                        <p className="Card-p">Mi raza es: <b>{raza ? raza : "Raza desconocida"}</b></p> 
-                        <p className="Card-p">Soy de color: <b>{color}</b></p> 
-                        <p className="Card-p">Género: <b>{genero}</b></p> 
-                        <p className="Card-p">Me han encontrado en: <b>{lugar_encontrado}</b></p> 
-                        <p className="Card-p">El día: <b>{fechaFormateada}</b></p> 
+                    <div className="card-info">
+                        <p className="card-p"><b>{tipo_de_animal}</b></p> 
+                        <p className="card-p">Mi raza es: <b>{raza ? raza : "Raza desconocida"}</b></p> 
+                        <p className="card-p">Soy de color: <b>{color}</b></p> 
+                        <p className="card-p">Género: <b>{genero}</b></p> 
+                        <p className="card-p">Me han encontrado en: <b>{lugar_encontrado}</b></p> 
+                        <p className="card-p">El día: <b>{fechaFormateada}</b></p> 
 
                         {/* Botón para mostrar la información de contacto */}
-                        <button className="Card-btn" onClick={toggleContacto}>Contacto</button>
+                        <button className="card-btn" onClick={toggleContacto}>Contacto</button>
 
                         {/* Muestra los detalles de contacto si el usuario está logueado */}
                         {mostrarContacto && (
-                            <p className="Card-p--contacto">
+                            <p className="card-p--contacto">
                                 Encontrado por: <b>{contacto_nombre}</b><br />Teléfono: <b>{contacto_telefono}</b>
                             </p>
                         )}
 
                         {/* Muestra una alerta si el usuario no está logueado */}
                         {mostrarAlerta && (
-                            <div className="Card-alerta">
+                            <div className="card-alerta">
                                 <p>Debes estar registrado para ver esta información</p>
                                 {/* Enlace para que el usuario se registre */}
-                                <Link className="Card-alerta--link" to="/registro"><b>Regístrate aquí</b></Link>
+                                <Link className="card-alerta--link" to="/registro"><b>Regístrate aquí</b></Link>
                             </div>
                         )}
                     </div>

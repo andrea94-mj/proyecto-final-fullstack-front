@@ -1,21 +1,21 @@
-.Header-encontrados{
+.header-encontrados{
     margin: 0 auto;
     width: 33%;
 }
-.Encontrados-h1{
+.encontrados-h1{
     font-size: 2.5rem;
     text-align: center;
     font-family: "Fuzzy Bubbles", sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.Encontrados-p{
+.encontrados-p{
     font-size: 1.1rem;
     text-align: justify;
     line-height: 1.8rem;
     margin-bottom: 1rem;
 }
-.Encontrados-container {
+.encontrados-container{
     width: 100%;
     margin: 2rem auto;
     display: grid;
@@ -26,15 +26,14 @@
     gap: 1rem; 
     padding: 1rem;
 }
-.registro-mascota-btn {
+.registro-mascota-btn{
     display: flex;
     justify-content: center;
     margin: 1.5rem 0;
 }
 
 
-
-.mensaje-error {
+.mensaje-error{
     color: #D32F2F;
     text-align: center;
     grid-column: span 4;
@@ -42,7 +41,7 @@
     padding: 2rem;
 }
 
-.cargando-datos {
+.cargando-datos{
     text-align: center;
     grid-column: span 4;
     font-size: 1.2rem;
@@ -53,11 +52,11 @@
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
-    .Encontrados-container {
+    .encontrados-container {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .Header-encontrados {
+    .header-encontrados {
         width: 50%;
     }
     .mensaje-error, .cargando-datos {
@@ -66,16 +65,16 @@
 }
 
 @media (max-width: 900px) {
-    .Encontrados-container {
+    .encontrados-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
     }
     
-    .Header-encontrados {
+    .header-encontrados {
         width: 70%;
     }
     
-    .Encontrados-h1 {
+    .encontrados-h1 {
         font-size: 2rem;
     }
     .mensaje-error, .cargando-datos {
@@ -88,20 +87,20 @@
 }
 
 @media (max-width: 600px) {
-    .Encontrados-container {
+    .encontrados-container {
         grid-template-columns: 1fr;
         padding: 0.5rem;
     }
     
-    .Header-encontrados {
+    .header-encontrados {
         width: 90%;
     }
     
-    .Encontrados-h1 {
+    .encontrados-h1 {
         font-size: 1.8rem;
     }
     
-    .Encontrados-p {
+    .encontrados-p {
         font-size: 1rem;
         line-height: 1.5rem;
     }

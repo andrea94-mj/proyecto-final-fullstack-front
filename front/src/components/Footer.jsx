@@ -6,38 +6,38 @@ const Footer = () => {
     return (
         <>
 
-            <section className="Secction-footer">
-                <nav className="Footer-nav">
+            <section className="secction-footer">
+                <nav className="footer-nav">
                     <ul>
-                        <li><NavLink to="/" className="Footer-li">Inicio</NavLink></li>
-                        <li><NavLink to="/encontrados" className="Footer-li">Encontrados</NavLink></li>
-                        <li><NavLink to="/perdidos" className="Footer-li">Perdidos</NavLink></li>
-                        <li><NavLink to="/registro" className="Footer-li">Registro</NavLink></li>
-                        <li><NavLink to="/acceso" className="Footer-li">Acceso</NavLink></li>
+                        <li><NavLink to="/" className="footer-li">Inicio</NavLink></li>
+                        <li><NavLink to="/encontrados" className="footer-li">Encontrados</NavLink></li>
+                        <li><NavLink to="/perdidos" className="footer-li">Perdidos</NavLink></li>
+                        <li><NavLink to="/registro" className="footer-li">Registro</NavLink></li>
+                        <li><NavLink to="/acceso" className="footer-li">Acceso</NavLink></li>
                     </ul>
                 </nav>
                 <div>
                     <nav>
-                        <ul className="Footer-ul">
-                            <li className="Footer-li"><Link to="/">Aviso Legal</Link></li>
-                            <li className="Footer-li"><Link to="/">Política de privacidad</Link></li>
-                            <li className="Footer-li"><Link to="/">Política de cookies</Link></li>
-                            <li><b><p className="Footer-p">&copy; 2021 - 2025 BuscaMascotas</p></b></li>
+                        <ul className="footer-ul">
+                            <li className="footer-li"><Link to="/">Aviso Legal</Link></li>
+                            <li className="footer-li"><Link to="/">Política de privacidad</Link></li>
+                            <li className="footer-li"><Link to="/">Política de cookies</Link></li>
+                            <li><b><p className="footer-p">&copy; 2021 - 2025 BuscaMascotas</p></b></li>
                         </ul>
                     </nav>
                 </div>
-                <nav className="Footer-nav">
-                    <ul className="Footer-ul">
-                        <li><a className="Footer-a" href="https://www.facebook.com/?locale=es_ES" tittle="facebook" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src="/facebook.svg" alt="logo_facebook" loading="lazy" />
+                <nav className="footer-nav">
+                    <ul className="footer-ul">
+                        <li><a className="footer-a" href="https://www.facebook.com/?locale=es_ES" tittle="facebook" target="_blank" rel="noreferrer">
+                            <img className="footer-img" src="/facebook.svg" alt="logo_facebook" loading="lazy" />
                         </a>
                         </li>
-                        <li><a className="Footer-a" href="https://www.instagram.com/?hl=es" title="instagram" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src="/instagram.svg" alt="logo_instagram" loading="lazy" />
+                        <li><a className="footer-a" href="https://www.instagram.com/?hl=es" title="instagram" target="_blank" rel="noreferrer">
+                            <img className="footer-img" src="/instagram.svg" alt="logo_instagram" loading="lazy" />
                         </a>
                         </li>
-                        <li><a className="Footer-a" href="https://twitter.com/?lang=es" title="logo_x" target="_blank" rel="noreferrer">
-                            <img className="Footer-img" src="/x-logo.svg" alt="logo_x" loading="lazy" />
+                        <li><a className="footer-a" href="https://twitter.com/?lang=es" title="logo_x" target="_blank" rel="noreferrer">
+                            <img className="footer-img" src="/x-logo.svg" alt="logo_x" loading="lazy" />
                         </a>
                         </li>
                     </ul>

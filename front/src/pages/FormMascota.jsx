@@ -7,16 +7,16 @@ import "@/css/Forms.css";
 const FormMascota = () => {
   return (
     <>
-      <article className='Registro-mascota'>
+      <article className='registro-mascota'>
         {/* Sección para registrar una mascota encontrada */}
         <div>
-          <p className='Form-p--registro'>¿Has encontrado una mascota? <br />Regístrala aquí</p>
+          <p className='form-p--registro'>¿Has encontrado una mascota? <br />Regístrala aquí</p>
           <RegistroEncontrado />
         </div>
 
         {/* Sección para registrar una mascota perdida */}
         <div>
-          <p className='Form-p--registro'>¿Has perdido a tu mascota? <br />Regístrala aquí</p>
+          <p className='form-p--registro'>¿Has perdido a tu mascota? <br />Regístrala aquí</p>
           <RegistroPerdido />
         </div>
       </article>

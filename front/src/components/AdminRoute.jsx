@@ -6,7 +6,7 @@ const AdminRoute = ({ children }) => {
   const { user } = useUser();
   
   // Verifica si el usuario existe y es administrador
-  if (!user || user.role !== 'admin') { // Cambio de 'administrador' a 'admin'
+  if (!user || user.role !== 'admin') { 
     // Redirige a la página principal o muestra un mensaje de acceso denegado
     return <Navigate to="/" />;
   }

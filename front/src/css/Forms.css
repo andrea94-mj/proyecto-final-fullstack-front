@@ -1,4 +1,4 @@
-.Article-form{
+.article-form{
     height: 80vh;
     display: flex;
     flex-flow: column nowrap;
@@ -9,7 +9,7 @@
     gap: 4rem;
 }
 
-.Article-form--mascota{
+.article-form--mascota{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -20,14 +20,14 @@
     gap: 4rem;
 }
 
-.Form-p{
+.form-p{
     width: 70%;
     color: rgb(128, 128, 0);
     font-size: 2rem;
     text-align: center;
 }
 
-.Form-registro {
+.form-registro {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@
     text-align: center;
 }
 
-.Form-acceso{
+.form-acceso{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@
     text-align: center;
 }
 
-.Form-mascota{
+.form-mascota{
     width: 500px;
     background-color: #fff;
     border-radius: 8px;
@@ -54,7 +54,7 @@
     text-align: center;
 }
 
-.Registro-mascota{
+.registro-mascota{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -62,7 +62,7 @@
     gap: 5rem;
 }
 
-.Form-p--registro{
+.form-p--registro{
     align-content: center;
     text-align: center;
     color: rgb(128, 128, 0);
@@ -70,16 +70,16 @@
     font-weight: 400;
 }
 
-.Form-p--acceso{
+.form-p--acceso{
     text-align: center;
 }
 
-h2 {
+h2{
     margin-bottom: 1.25rem;
     color: #333;
 }
 
-input {
+input{
     width: 100%;
     padding: .625rem;
     margin-bottom: 1.5rem;
@@ -87,17 +87,17 @@ input {
     border-radius: 4px;
 }
 
-input:focus {
+input:focus{
     border: 1px solid rgb(128, 128, 0);
     outline: none;
 }
 
-label {
+label{
     display: block;
     margin: 10px 0;
 }
 
-button {
+button{
     background-color: rgb(128, 128, 0);
     color: #fff;
     padding: 10px;
@@ -108,17 +108,16 @@ button {
     margin: 0 auto;
 }
 
-button:disabled {
+button:disabled{
     background-color: #ccc;
 }
 
 button:hover{
-    background-color: white;
-    border: 1.5px solid rgb(128, 128, 0);
+    background-color: bisque;
     color: black;
 }
 
-.Submit-p{
+.submit-p{
     font-size: 0.8rem;
     color: rgb(164, 164, 164);
 }
@@ -126,40 +125,40 @@ button:hover{
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
-    .Article-form{
+    .article-form{
         width: 100%;
         height: auto;
     }
-    .Form-mascota{
+    .form-mascota{
         width: 90%;
     }
-    .Form-registro{
+    .form-registro{
         width: 90%;
     }
-    .Form-acceso{
+    .form-acceso{
         width: 90%;
     }
-    .Form-p{
+    .form-p{
         width: 70%;
         font-size: 1.5rem;
     }
-    .Form-p--acceso{
+    .form-p--acceso{
         margin-bottom: 1.5rem;
     }
-    .Form-registro{
+    .form-registro{
         margin-bottom: 1.5rem;
     }
-    .Registro-mascota{
+    .registro-mascota{
         gap: 1rem;
     }
 }
 
 @media (max-width: 600px) {
-    .Form-p{
+    .form-p{
         width: 80%;
         font-size: 1.2rem;
     }
-    .Registro-mascota{
+    .registro-mascota{
         flex-flow: column nowrap;
         align-items: center;
         gap: 1rem;

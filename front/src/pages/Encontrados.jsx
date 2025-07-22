@@ -38,9 +38,9 @@ const Encontrados = () => {
 
     return (
         <>
-            <header className="Header-encontrados">
-                <h1 className="Encontrados-h1">Mascotas Encontradas</h1>
-                <p className="Encontrados-p">
+            <header className="header-encontrados">
+                <h1 className="encontrados-h1">Mascotas Encontradas</h1>
+                <p className="encontrados-p">
                     Estas son las mascotas que han sido encontradas y están esperando reunirse con sus dueños.
                     Si reconoces a alguna de ellas, no dudes en ponerte en contacto para que puedan volver a casa lo antes posible.
                 </p>
@@ -51,7 +51,7 @@ const Encontrados = () => {
                 <Link to="/mascota"><button>Registrar mascota encontrada</button></Link>
             </div>
 
-            <section className="Encontrados-container">
+            <section className="encontrados-container">
                 {errorData ? (
                     <p className="mensaje-error">{errorData}</p> // Muestra mensaje de error si no hay resultados
                 ) : catalogo.length === 0 ? (

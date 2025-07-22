@@ -40,9 +40,9 @@ const Perdidos = () => {
 
     return (
         <>
-            <header className="Header-perdidos">
-                <h1 className="Perdidos-h1">Mascotas Perdidas</h1>
-                <p className="Perdidos-p">
+            <header className="header-perdidos">
+                <h1 className="perdidos-h1">Mascotas Perdidas</h1>
+                <p className="perdidos-p">
                     En esta sección podrás ver las mascotas que han sido reportadas como perdidas.
                     Si tienes información sobre alguna de ellas, por favor contacta con la persona indicada.
                 </p>
@@ -53,7 +53,7 @@ const Perdidos = () => {
                 <Link to="/mascota"><button>Registrar mascota perdida</button></Link>
             </div>
 
-            <section className="Perdidos-container">
+            <section className="perdidos-container">
                 {/* Mostrar mensaje de error o catálogo de mascotas perdidas */}
                 {errorData ? (
                     <p className="mensaje-error">{errorData}</p>

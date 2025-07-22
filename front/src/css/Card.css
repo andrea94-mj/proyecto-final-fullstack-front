@@ -1,52 +1,52 @@
 
-.Card{
+.card{
     background-color: rgb(128, 128, 0);
     border-radius: 12px;
     gap: 1.5rem;
     margin: 0 auto;
     padding: 0.8rem;
 }
-.Header-card{
+.header-card{
     margin-bottom: 0.5rem;
     gap: 1rem;
 }
-.Card-img{
+.card-img{
     border-radius: 8%;
     width: 280px;
     height: 280px;
     align-content: center;
 }
-.Card-h1{
+.card-h1{
     text-align: center;
     color: bisque;
     font-size: 1.2em;
 }
-.Card-info{
+.card-info{
     background-color: bisque;
     border-radius: 1em;
     padding: 1rem;
 }
-.Card-p{
+.card-p{
     font-size: 0.8em;
     line-height: 1.5rem;
 }
-.Card-p--contacto{
+.card-p--contacto{
     text-align: center;
     font-size: 0.8em;
     line-height: 1.5rem;
 }
-.Card-alerta{
+.card-alerta{
     margin-top: 0.6rem;
     color: black;
     font-size: 0.65rem;
     text-align: center;
 }
-.Card-alerta--link{
+.card-alerta--link{
     margin-top: 0.5rem;
     font-size: 0.75rem;
 }
 
-.Card-btn{
+.card-btn{
     background-color: rgb(128, 128, 0);
     color: bisque;
     font-size: 0.9em;
@@ -56,7 +56,7 @@
     transition: background-color 0.3s;
     margin: 0.5rem auto;
 }
-.Card-btn:hover{
+.card-btn:hover{
     background-color: bisque;
     color: black;
 }

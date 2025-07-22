@@ -1,21 +1,21 @@
-.Header-perdidos{
+.header-perdidos{
     margin: 0 auto;
     width: 28%;
 }
-.Perdidos-h1{
+.perdidos-h1{
     font-size: 2.5rem;
     text-align: center;
     font-family: "Fuzzy Bubbles", sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.Perdidos-p{
+.perdidos-p{
     font-size: 1.1rem;
     text-align: justify;
     line-height: 1.8rem;
     margin-bottom: 1rem;
 }
-.Perdidos-container {
+.perdidos-container{
     width: 100%;
     margin: 2rem auto;
     display: grid;
@@ -27,13 +27,13 @@
     padding: 1rem;
 }
 
-.registro-mascota-btn {
+.registro-mascota-btn{
     display: flex;
     justify-content: center;
     margin: 1.5rem 0;
 }
 
-.mensaje-error {
+.mensaje-error{
     color: #D32F2F;
     text-align: center;
     grid-column: span 4;
@@ -41,7 +41,7 @@
     padding: 2rem;
 }
 
-.cargando-datos {
+.cargando-datos{
     text-align: center;
     grid-column: span 4;
     font-size: 1.2rem;
@@ -52,11 +52,11 @@
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
-    .Perdidos-container {
+    .perdidos-container {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .Header-perdidos {
+    .header-perdidos {
         width: 50%;
     }
     .mensaje-error, .cargando-datos {
@@ -65,16 +65,16 @@
 }
 
 @media (max-width: 900px) {
-    .Perdidos-container {
+    .perdidos-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
     }
     
-    .Header-perdidos {
+    .header-perdidos {
         width: 70%;
     }
     
-    .Perdidos-h1 {
+    .perdidos-h1 {
         font-size: 2rem;
     }
     .mensaje-error, .cargando-datos {
@@ -87,20 +87,20 @@
 }
 
 @media (max-width: 600px) {
-    .Perdidos-container {
+    .perdidos-container {
         grid-template-columns: 1fr;
         padding: 0.5rem;
     }
     
-    .Header-perdidos {
+    .header-perdidos {
         width: 90%;
     }
     
-    .Perdidos-h1 {
+    .perdidos-h1 {
         font-size: 1.8rem;
     }
     
-    .Perdidos-p {
+    .perdidos-p {
         font-size: 1rem;
         line-height: 1.5rem;
     }

@@ -7,36 +7,36 @@ const Header = () => {
 
     return (
         <>
-            <section className="Secction-header">
-                <img className="Secction-img" src="/logo-buscamascotas.svg" alt="buscamascotas" /> 
-                <nav className="Header-nav">
-                    <ul className="Header-ul">
-                        <li><NavLink to="/" className="Header-li"><b>Inicio</b></NavLink></li> 
-                        <li><NavLink to="/perdidos" className="Header-li"><b>Perdidos</b></NavLink></li> 
-                        <li><NavLink to="/encontrados" className="Header-li"><b>Encontrados</b></NavLink></li> 
+            <section className="secction-header">
+                <img className="secction-img" src="/logo-buscamascotas.svg" alt="buscamascotas" loading="lazy" /> 
+                <nav className="header-nav">
+                    <ul className="header-ul">
+                        <li><NavLink to="/" className="header-li"><b>Inicio</b></NavLink></li> 
+                        <li><NavLink to="/perdidos" className="header-li"><b>Perdidos</b></NavLink></li> 
+                        <li><NavLink to="/encontrados" className="header-li"><b>Encontrados</b></NavLink></li> 
 
                         {user ? (
                             <>
                             {/* Mostrar "Registrar Mascota" solo si el usuario NO es administrador */}
                             {user.role !== 'admin' && (
-                                <li><NavLink to="/mascota" className="Header-li"><b>Registrar Mascota</b></NavLink></li>
+                                <li><NavLink to="/mascota" className="header-li"><b>Registrar Mascota</b></NavLink></li>
                             )}
-                            <div className="Usuario">
+                            <div className="usuario">
                                 <li>
-                                    <img className="Usuario-img" src={user.image} alt={user.username} />
+                                    <img className="usuario-img" src={user.image} alt={user.username} />
                                 </li>
-                                <h3 className="Usuario-h3">{user.name}</h3>
+                                <h3 className="usuario-h3">{user.name}</h3>
                             </div>
-                            <li><NavLink onClick={logout} className="Header-li--logout"><b>X</b></NavLink></li>
+                            <li><NavLink onClick={logout} className="header-li--logout"><b>X</b></NavLink></li>
                             </>
                         ) : (
                             <>
-                            <li><NavLink to="/acceso" className="Header-li"><b>Acceso</b></NavLink></li>
+                            <li><NavLink to="/acceso" className="header-li"><b>Acceso</b></NavLink></li>
                             </>
                         )}
                         {/* Mostrar enlace al panel de administrador si el usuario es admin */}
                         {user && user.role === 'admin' && (
-                            <li><NavLink to="/administrador" className="Header-li"><b>Panel Admin</b></NavLink></li>
+                            <li><NavLink to="/administrador" className="header-li"><b>Admin</b></NavLink></li>
                         )}
                     </ul>
                 </nav>

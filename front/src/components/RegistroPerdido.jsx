@@ -93,8 +93,8 @@ const RegistroPerdido = ({ onSubmit }) => {
 
   return (
     <>
-      <article className='Article-form--mascota'>
-        <form className='Form-mascota' onSubmit={handleSubmit}>
+      <article className='article-form--mascota'>
+        <form className='form-mascota' onSubmit={handleSubmit}>
           {/* Campo para seleccionar la imagen de la mascota perdida */}
           <div>
             <label>Imagen:</label>
@@ -128,12 +128,12 @@ const RegistroPerdido = ({ onSubmit }) => {
           {/* Campo para escribir el lugar donde se perdió la mascota */}
           <div>
             <label>¿Dónde lo has perdido?</label>
-            <input type="text" name="lugar_perdido" value={formData.lugar_encontrado} onChange={handleChange} required />
+            <input type="text" name="lugar_perdido" value={formData.lugar_perdido} onChange={handleChange} required />
           </div>
           {/* Campo para poner la fecha en la que se perdió la mascota */}
           <div>
             <label>¿Cuándo lo has perdido?</label>
-            <input type="date" name="fecha_perdido" value={formData.fecha_encontrado} onChange={handleChange} required />
+            <input type="date" name="fecha_perdido" value={formData.fecha_perdido} onChange={handleChange} required />
           </div>
           {/* Campo para escribir el nombre de contacto */}
           <div>

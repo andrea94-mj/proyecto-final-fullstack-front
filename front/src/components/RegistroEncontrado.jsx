@@ -90,8 +90,8 @@ const RegistroEncontrado = ({ onSubmit }) => {
 
   return (
     <>
-    <article className='Article-form--mascota'>
-    <form className='Form-mascota' onSubmit={handleSubmit}>
+    <article className='article-form--mascota'>
+    <form className='form-mascota' onSubmit={handleSubmit}>
       {/* Campo para seleccionar la imagen de la mascota encontrada */}
       <div>
         <label>Imagen:</label>

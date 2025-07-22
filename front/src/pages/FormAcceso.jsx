@@ -49,9 +49,9 @@ const FormAcceso = () => {
 
     return (
         <>
-            <article className="Article-form">
-                <p className='Form-p'>Accede a tu cuenta para publicar si has perdido/encontrado una mascota e interactuar con los usuarios:</p>
-                <form className="Form-acceso" onSubmit={handleSubmit} >
+            <article className="article-form">
+                <p className='form-p'>Accede a tu cuenta para publicar si has perdido/encontrado una mascota e interactuar con los usuarios:</p>
+                <form className="form-acceso" onSubmit={handleSubmit} >
 
                     {/* Mensaje de error */}
                     {error && <div className="error-message" style={{ color: 'red', marginBottom: '15px' }}>{error}</div>}
@@ -69,7 +69,7 @@ const FormAcceso = () => {
                 </form>
 
                 {/* Enlace para registrarse si no se tiene una cuenta */}
-                <p className="Form-p--acceso">¿Todavía no tienes cuenta con nosotros? <br /> <Link to="/registro"><b>Regístrate aquí</b></Link></p>
+                <p className="form-p--acceso">¿Todavía no tienes cuenta con nosotros? <br /> <Link to="/registro"><b>Regístrate aquí</b></Link></p>
             </article>
         </>
     );
