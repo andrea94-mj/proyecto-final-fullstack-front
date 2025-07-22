@@ -15,7 +15,7 @@ const Perdidos = () => {
 
     // useEffect para obtener los datos del catálogo al cargar el componente
     useEffect(() => {
-        getCatalogo(`${URL}/perdidos`);
+        getCatalogo(`${URL}perdidos`);
     }, []);
 
     // Función asíncrona para obtener el catálogo de mascotas perdidas desde la API

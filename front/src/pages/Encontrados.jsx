@@ -14,7 +14,7 @@ const Encontrados = () => {
     const { user } = useUser(); // Obtiene el usuario actual para verificar si está logueado
 
     useEffect(() => {
-        getCatalogo(`${URL}/encontrados`); // Carga el catálogo al montar el componente
+        getCatalogo(`${URL}encontrados`); // Carga el catálogo al montar el componente
     }, []);
 
     // Función para obtener el catálogo de mascotas desde la API
