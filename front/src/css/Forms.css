@@ -79,6 +79,10 @@ h2{
     color: #333;
 }
 
+.h2-editar{
+    font-size: 1.5rem;
+}
+
 input{
     width: 100%;
     padding: .625rem;

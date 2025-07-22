@@ -145,10 +145,10 @@ const handleSubmit = async (e) => {
   }
 
   return (
-    <article className='Article-form--mascota'>
-      <h2>Editar Mascota Perdida</h2>
+    <article className='article-form--mascota'>
+      <h2 className='h2-editar'>Editar Mascota Perdida</h2>
       
-      <form className='Form-mascota' onSubmit={handleSubmit}>
+      <form className='form-mascota' onSubmit={handleSubmit}>
         
         {/* Campo para seleccionar la imagen */}
         <div>
