@@ -17,11 +17,11 @@ const Admin = () => {
     setLoading(true);
     try {
       // Cargar mascotas perdidas
-      const resPerdidos = await fetch(`${URL}/perdidos`);
+      const resPerdidos = await fetch(`${URL}perdidos`);
       const dataPerdidos = await resPerdidos.json();
       
       // Cargar mascotas encontradas
-      const resEncontrados = await fetch(`${URL}/encontrados`);
+      const resEncontrados = await fetch(`${URL}encontrados`);
       const dataEncontrados = await resEncontrados.json();
       
       setPerdidos(dataPerdidos.data || []);
