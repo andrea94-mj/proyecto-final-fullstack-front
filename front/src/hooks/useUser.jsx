@@ -25,7 +25,7 @@ export function UserProvider({ children }) {
     const login = async (userData) => {
         try {
             // Petición al backend para iniciar sesión
-            const response = await fetch(`${VITE_API_URL}/acceso`, {
+            const response = await fetch(`${VITE_API_URL}acceso`, {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json'
@@ -67,7 +67,7 @@ export function UserProvider({ children }) {
     const register = async (userData) => {
         try {
             // Petición al backend para registrarse
-            const response = await fetch(`${VITE_API_URL}/registro`, {
+            const response = await fetch(`${VITE_API_URL}registro`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
