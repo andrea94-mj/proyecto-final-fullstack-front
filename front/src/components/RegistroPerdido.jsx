@@ -58,7 +58,7 @@ const RegistroPerdido = ({ onSubmit }) => {
 
     try {
       // Enviar los datos a la API
-      const response = await fetch(`${URL}/nuevoPerdido`, {
+      const response = await fetch(`${URL}nuevoPerdido`, {
         method: 'POST',
         body: data
       });

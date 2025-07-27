@@ -56,7 +56,7 @@ const RegistroEncontrado = ({ onSubmit }) => {
 
     try {
       // Enviar los datos a la API
-      const response = await fetch(`${URL}/nuevoEncontrado`, {
+      const response = await fetch(`${URL}nuevoEncontrado`, {
         method: 'POST',
         body: data 
       });
