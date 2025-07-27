@@ -7,7 +7,7 @@ const UserContext = createContext();
 export function UserProvider({ children }) {
     const [user, setUser] = useState(null); // Estado para almacenar el usuario logueado
 
-    const { VITE_API_URL } = import.meta.env; // Variable de entorno para la URL de la API
+    const VITE_API_URL = import.meta.env.VITE_API_URL; // Variable de entorno para la URL de la API
 
     // Comprobar si el usuario ya está logueado 
     useEffect(() => {
