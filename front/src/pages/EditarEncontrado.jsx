@@ -28,7 +28,7 @@ const EditarEncontrado = () => {
   useEffect(() => {
     const cargarMascota = async () => {
       try {
-        const response = await fetch(`${URL}/encontrados/${id}`);
+        const response = await fetch(`${URL}encontrados/${id}`);
         if (response.ok) {
           const data = await response.json();
           const mascota = data.data;
@@ -117,7 +117,7 @@ const handleSubmit = async (e) => {
     // Obtener el token del localStorage
     const token = localStorage.getItem('token');
     
-    const response = await fetch(`${URL}/encontrados/${id}`, {
+    const response = await fetch(`${URL}encontrados/${id}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`

@@ -46,7 +46,7 @@ const eliminarPerdido = async (id) => {
       // Obtener el token del localStorage
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`${URL}/perdidos/${id}`, {
+      const response = await fetch(`${URL}perdidos/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -74,7 +74,7 @@ const eliminarEncontrado = async (id) => {
       // Obtener el token del localStorage
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`${URL}/encontrados/${id}`, {
+      const response = await fetch(`${URL}encontrados/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
